@@ -26,6 +26,7 @@
           <e p="Slime.cs" t="Include" />
           <e p="SlimeManager.cs" t="Include" />
           <e p="StateBase.cs" t="Include" />
+          <e p="StateFeed.cs" t="Include" />
           <e p="StateForwardJump.cs" t="Include" />
           <e p="StateIdle.cs" t="Include" />
           <e p="StateJump.cs" t="Include" />

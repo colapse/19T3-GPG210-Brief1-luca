@@ -12,6 +12,7 @@ public class StateManager : MonoBehaviour
     public StateBase randomPushState;
     public StateBase rotateLeftState;
     public StateBase rotateRightState;
+    public StateBase feedState;
 
     private Slime slime;
     private SlimeManager sm;
@@ -41,6 +42,11 @@ public class StateManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1) && isActiveSlime)
         {
             ChangeState(randomPushState);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha2) && isActiveSlime)
+        {
+            ChangeState(feedState);
         }
         
         if(Input.GetKeyDown(KeyCode.LeftArrow) && isActiveSlime)

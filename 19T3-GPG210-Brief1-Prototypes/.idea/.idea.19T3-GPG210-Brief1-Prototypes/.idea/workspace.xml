@@ -3,23 +3,24 @@
   <component name="ChangeListManager">
     <list default="true" id="ef4ac5ec-078c-4fb1-8d67-0e887f987c8e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.19T3-GPG210-Brief1-Prototypes/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.19T3-GPG210-Brief1-Prototypes/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.19T3-GPG210-Brief1-Prototypes/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.19T3-GPG210-Brief1-Prototypes/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.19T3-GPG210-Brief1-Prototypes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.19T3-GPG210-Brief1-Prototypes/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SlimePuzzles.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SlimePuzzles.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Door.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Door.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Slime.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Slime.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateJump.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateJump.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Slime.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Slime.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/BuiltinAssemblies.stamp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/1fde85-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/1fde85-mainStage.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/4b738c-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/4b738c-mainStage.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/assetDatabase3" beforeDir="false" afterPath="$PROJECT_DIR$/Library/assetDatabase3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/36/366f15246a7cd6549a7cff5f13fbf6c6" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/36/366f15246a7cd6549a7cff5f13fbf6c6" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/metadata/88/886b1581e2c87034989b1b21d6d0f584" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/88/886b1581e2c87034989b1b21d6d0f584" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/metadata/88/886b1581e2c87034989b1b21d6d0f584.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/88/886b1581e2c87034989b1b21d6d0f584.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/d3/d3d8ea9f9ba00cb4f9dfb0579849ea5d" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/d3/d3d8ea9f9ba00cb4f9dfb0579849ea5d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/cc/cc0605e9bf4dcd84e88bc9979dc55dd3" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/cc/cc0605e9bf4dcd84e88bc9979dc55dd3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/d1/d15eba6ecc9d0e240ae34624f8e05c6b" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/d1/d15eba6ecc9d0e240ae34624f8e05c6b" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,12 +32,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Door.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Helper/SerializeableDictionary/UserSerializableDictionaries.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PressurePlate.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PressurePlateTrigger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Door.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateRotateLeft.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateFeed.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SlimeManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Triggerable.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PressurePlateTrigger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateJump.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateRandomPush.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Slime.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Trigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateForwardJump.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -51,6 +58,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Trigger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Triggerable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Door.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slime.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateFeed.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateJump.cs" />
       </list>
     </option>
   </component>
@@ -102,7 +113,7 @@
       <option name="presentableId" value="Default" />
       <updated>1569371146213</updated>
       <workItem from="1569371149500" duration="378000" />
-      <workItem from="1569377384110" duration="6523000" />
+      <workItem from="1569377384110" duration="12344000" />
     </task>
     <servers />
   </component>

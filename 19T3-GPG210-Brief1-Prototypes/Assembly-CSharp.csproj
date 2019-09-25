@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\Slime.cs" />
     <Compile Include="Assets\Scripts\SlimeManager.cs" />
     <Compile Include="Assets\Scripts\StateBase.cs" />
+    <Compile Include="Assets\Scripts\StateFeed.cs" />
     <Compile Include="Assets\Scripts\StateForwardJump.cs" />
     <Compile Include="Assets\Scripts\StateIdle.cs" />
     <Compile Include="Assets\Scripts\StateJump.cs" />

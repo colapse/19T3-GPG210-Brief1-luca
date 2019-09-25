@@ -7,6 +7,7 @@ using Random = UnityEngine.Random;
 
 public class Slime : MonoBehaviour
 {
+    public bool freeFeed = false;
     
     public Rigidbody rb;
      [SerializeField] private float volume = 1;
@@ -45,12 +46,13 @@ public class Slime : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
         Slime otherSlime = other.collider.GetComponent<Slime>();
-        if (otherSlime != null && other.impulse.magnitude > 2)
+        if (otherSlime != null && (other.impulse.magnitude > 2 || freeFeed || otherSlime.freeFeed))
         {
             if (otherSlime.Volume > volume)
             {
                 // This Slime is smaller, gets eaten
-                StartCoroutine(DeleteSlime()); // Ugly solution. Waits for a second to make sure the CollisionEnter method in the other slime is fully executed
+                //StartCoroutine(DeleteSlime()); // Ugly solution. Waits for a second to make sure the CollisionEnter method in the other slime is fully executed
+                Destroy(gameObject);
             }else if (otherSlime.Volume < volume)
             {
                 // This Slime is bigger, eats the smaller one
