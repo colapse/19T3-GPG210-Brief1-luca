@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\ltnnler\.Rider2019.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\ltnnler\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_19T3-GPG210-Brief1-Prototypes.137411680.00" t="ExcludeRecursive" />
-    <e p="C:\Users\ltnnler\19T3-GPG210-Brief1-Prototypes" t="IncludeRecursive">
+    <e p="C:\Users\ltnnler\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_19T3-GPG210-Brief1-Prototypes.1614813707.00" t="ExcludeRecursive" />
+    <e p="C:\Users\ltnnler\Documents\githubrepos\19T3-GPG210-Brief1-luca\19T3-GPG210-Brief1-Prototypes" t="IncludeRecursive">
       <e p="19T3-GPG210-Brief1-Prototypes.sln" t="IncludeFlat" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -12,8 +12,17 @@
             <e p="PlayerCamera.cs" t="Include" />
           </e>
           <e p="Door.cs" t="Include" />
+          <e p="Helper" t="Include">
+            <e p="SerializeableDictionary" t="Include">
+              <e p="SerializableDictionary.cs" t="Include" />
+              <e p="SerializableDictionaryPropertyDrawer.cs" t="Include" />
+              <e p="SerializableHashSet.cs" t="Include" />
+              <e p="UserSerializableDictionaries.cs" t="Include" />
+            </e>
+          </e>
           <e p="MultiStagePressurePlate.cs" t="Include" />
           <e p="PressurePlate.cs" t="Include" />
+          <e p="PressurePlateTrigger.cs" t="Include" />
           <e p="Slime.cs" t="Include" />
           <e p="SlimeManager.cs" t="Include" />
           <e p="StateBase.cs" t="Include" />
@@ -25,6 +34,8 @@
           <e p="StateRotateLeft.cs" t="Include" />
           <e p="StateRotateRight.cs" t="Include" />
           <e p="StateScaler.cs" t="Include" />
+          <e p="Trigger.cs" t="Include" />
+          <e p="Triggerable.cs" t="Include" />
         </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />

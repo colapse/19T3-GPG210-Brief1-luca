@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
 public class Door : MonoBehaviour
@@ -28,6 +29,11 @@ public class Door : MonoBehaviour
                 renderer.enabled = true;
             }
         }
+    }
+
+    public void OpenDoor(bool open)
+    {
+        renderer.enabled = !open;
     }
 
     // Start is called before the first frame update

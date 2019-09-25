@@ -59,8 +59,13 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Camera\PlayerCamera.cs" />
     <Compile Include="Assets\Scripts\Door.cs" />
+    <Compile Include="Assets\Scripts\Helper\SerializeableDictionary\SerializableDictionary.cs" />
+    <Compile Include="Assets\Scripts\Helper\SerializeableDictionary\SerializableDictionaryPropertyDrawer.cs" />
+    <Compile Include="Assets\Scripts\Helper\SerializeableDictionary\SerializableHashSet.cs" />
+    <Compile Include="Assets\Scripts\Helper\SerializeableDictionary\UserSerializableDictionaries.cs" />
     <Compile Include="Assets\Scripts\MultiStagePressurePlate.cs" />
     <Compile Include="Assets\Scripts\PressurePlate.cs" />
+    <Compile Include="Assets\Scripts\PressurePlateTrigger.cs" />
     <Compile Include="Assets\Scripts\Slime.cs" />
     <Compile Include="Assets\Scripts\SlimeManager.cs" />
     <Compile Include="Assets\Scripts\StateBase.cs" />
@@ -72,32 +77,34 @@
     <Compile Include="Assets\Scripts\StateRotateLeft.cs" />
     <Compile Include="Assets\Scripts\StateRotateRight.cs" />
     <Compile Include="Assets\Scripts\StateScaler.cs" />
+    <Compile Include="Assets\Scripts\Trigger.cs" />
+    <Compile Include="Assets\Scripts\Triggerable.cs" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/ltnnler/19T3-GPG210-Brief1-Prototypes/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/ltnnler/Documents/githubrepos/19T3-GPG210-Brief1-luca/19T3-GPG210-Brief1-Prototypes/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/Users/ltnnler/19T3-GPG210-Brief1-Prototypes/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>C:/Users/ltnnler/Documents/githubrepos/19T3-GPG210-Brief1-luca/19T3-GPG210-Brief1-Prototypes/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/ltnnler/19T3-GPG210-Brief1-Prototypes/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/ltnnler/Documents/githubrepos/19T3-GPG210-Brief1-luca/19T3-GPG210-Brief1-Prototypes/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/ltnnler/19T3-GPG210-Brief1-Prototypes/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/ltnnler/Documents/githubrepos/19T3-GPG210-Brief1-luca/19T3-GPG210-Brief1-Prototypes/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/ltnnler/19T3-GPG210-Brief1-Prototypes/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/ltnnler/Documents/githubrepos/19T3-GPG210-Brief1-luca/19T3-GPG210-Brief1-Prototypes/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/ltnnler/19T3-GPG210-Brief1-Prototypes/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/ltnnler/Documents/githubrepos/19T3-GPG210-Brief1-luca/19T3-GPG210-Brief1-Prototypes/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/ltnnler/19T3-GPG210-Brief1-Prototypes/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>C:/Users/ltnnler/Documents/githubrepos/19T3-GPG210-Brief1-luca/19T3-GPG210-Brief1-Prototypes/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/ltnnler/19T3-GPG210-Brief1-Prototypes/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/ltnnler/Documents/githubrepos/19T3-GPG210-Brief1-luca/19T3-GPG210-Brief1-Prototypes/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/ltnnler/19T3-GPG210-Brief1-Prototypes/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/ltnnler/Documents/githubrepos/19T3-GPG210-Brief1-luca/19T3-GPG210-Brief1-Prototypes/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.0f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
