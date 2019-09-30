@@ -32,36 +32,87 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Decision.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/GetUprightAction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Helper/SerializeableDictionary/UserSerializableDictionaries.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PressurePlate.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PressurePlateTrigger.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/WanderAction.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/StateController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Action.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Door.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateRotateLeft.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateFeed.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SlimeManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Triggerable.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateJump.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateRandomPush.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Slime.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PressurePlateTrigger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateScaler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateRotateRight.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Trigger.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateForwardJump.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/State.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateRotateLeft.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Triggerable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateRandomPush.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Transition.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SlimeManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateJump.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Slime.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/ChaseAction.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateIdle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateForwardJump.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateFeed.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/SlimeNotUprightDecision.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SlimeInputManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/EnemyDetectedDecision.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/ActionData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerInputManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PressurePlate.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/StateData.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/SlimeManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/StateForwardJump.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Helper/SerializeableDictionary/UserSerializableDictionaries.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PressurePlateTest.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PressurePlateTrigger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Trigger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Triggerable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Door.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/StateManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Slime.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/StateFeed.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateBase.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/StateWander.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/IState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateRotateLeft.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateRotateRight.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateScaler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateRandomPush.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateJump.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateIdle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateFeed.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerInputManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SlimeManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateForwardJump.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Decision.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Transition.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/PlayerDetectedDecision.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/EnemyDetectedDecision.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Helper/SerializeableDictionary/UserSerializableDictionaries.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Action.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/ChaseAction.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/StateData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/State.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateBase.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateFeed.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateForwardJump.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateIdle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateRandomPush.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateRotateLeft.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateRotateRight.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateScaler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/StateController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/WanderAction.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/ActionData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/SlimeNotUprightDecision.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/GetUprightAction.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SlimeInputManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateJump.cs" />
       </list>
     </option>
   </component>
@@ -94,10 +145,10 @@
       <option name="userSelectedPid" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" pid="20576">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="20576" />
       <option name="userSelectedPid" value="false" />
       <method v="2" />
     </configuration>
@@ -114,6 +165,12 @@
       <updated>1569371146213</updated>
       <workItem from="1569371149500" duration="378000" />
       <workItem from="1569377384110" duration="12344000" />
+      <workItem from="1569474044524" duration="3502000" />
+      <workItem from="1569487486538" duration="625000" />
+      <workItem from="1569543414281" duration="8591000" />
+      <workItem from="1569563455682" duration="4122000" />
+      <workItem from="1569660289727" duration="1288000" />
+      <workItem from="1569833036246" duration="1702000" />
     </task>
     <servers />
   </component>
@@ -127,7 +184,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

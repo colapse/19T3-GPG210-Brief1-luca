@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using StateMachineV1;
 using UnityEditor.PackageManager.Requests;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -8,6 +9,8 @@ public class SlimeManager : MonoBehaviour
 {
     public delegate void FocusChangeDel (GameObject gameObject);
     public FocusChangeDel onFocusChange;
+
+    public SlimeInputManager slimeInputManager;
       
     public void NotifyFocusChange(GameObject gameObject)
     {
@@ -78,13 +81,17 @@ public class SlimeManager : MonoBehaviour
         {
             GameObject newSlimeObj = Instantiate(slimePrefab,slime.transform.position,slime.transform.rotation);
             Slime newSlime = newSlimeObj.GetComponent<Slime>();
+            StateManager newSlimeStateManager = newSlimeObj.GetComponent<StateManager>();
 
+            newSlimeStateManager.slimeInputManager = slimeInputManager;
+            
             newSlime.Volume = slime.Volume / 2;
             slime.Volume /= 2;
             
             if(newSlime)
                 slimes.Add(newSlime);
-            Debug.Log(slime.transform.right);
+            
+            // Push slimes apart from each other
             newSlime.rb.AddForce(slime.transform.right*30*newSlime.Volume);
             slime.rb.AddForce(slime.transform.right*-30*newSlime.Volume);
         }

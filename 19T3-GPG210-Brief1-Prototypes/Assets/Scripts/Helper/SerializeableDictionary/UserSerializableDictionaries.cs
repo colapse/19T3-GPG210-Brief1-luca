@@ -10,6 +10,8 @@ using UnityEngine;
 public class TriggerIntDictionary : SerializableDictionary<Trigger, int> { }
 [Serializable]
 public class TriggerBoolDictionary : SerializableDictionary<Trigger, bool> { }
+[Serializable]
+public class StringObjectDictionary : SerializableDictionary<string, System.Object> { }
 /*
 [Serializable]
 public class StringStringDictionary : SerializableDictionary<string, string> {}

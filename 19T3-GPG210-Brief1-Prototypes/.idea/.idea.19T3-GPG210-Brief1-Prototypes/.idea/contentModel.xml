@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\ltnnler\.Rider2019.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\ltnnler\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_19T3-GPG210-Brief1-Prototypes.1614813707.00" t="ExcludeRecursive" />
-    <e p="C:\Users\ltnnler\Documents\githubrepos\19T3-GPG210-Brief1-luca\19T3-GPG210-Brief1-Prototypes" t="IncludeRecursive">
+    <e p="C:\Users\Luca\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Luca\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_19T3-GPG210-Brief1-Prototypes.-1745433628.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Luca\Documents\gitrepos\19T3-GPG210-Brief1-luca\19T3-GPG210-Brief1-Prototypes" t="IncludeRecursive">
       <e p="19T3-GPG210-Brief1-Prototypes.sln" t="IncludeFlat" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -21,20 +21,38 @@
             </e>
           </e>
           <e p="MultiStagePressurePlate.cs" t="Include" />
+          <e p="PlayerInputManager.cs" t="Include" />
           <e p="PressurePlate.cs" t="Include" />
           <e p="PressurePlateTrigger.cs" t="Include" />
           <e p="Slime.cs" t="Include" />
+          <e p="SlimeInputManager.cs" t="Include" />
           <e p="SlimeManager.cs" t="Include" />
-          <e p="StateBase.cs" t="Include" />
-          <e p="StateFeed.cs" t="Include" />
-          <e p="StateForwardJump.cs" t="Include" />
-          <e p="StateIdle.cs" t="Include" />
-          <e p="StateJump.cs" t="Include" />
-          <e p="StateManager.cs" t="Include" />
-          <e p="StateRandomPush.cs" t="Include" />
-          <e p="StateRotateLeft.cs" t="Include" />
-          <e p="StateRotateRight.cs" t="Include" />
-          <e p="StateScaler.cs" t="Include" />
+          <e p="StateMachineV1" t="Include">
+            <e p="StateBase.cs" t="Include" />
+            <e p="StateFeed.cs" t="Include" />
+            <e p="StateForwardJump.cs" t="Include" />
+            <e p="StateIdle.cs" t="Include" />
+            <e p="StateJump.cs" t="Include" />
+            <e p="StateManager.cs" t="Include" />
+            <e p="StateRandomPush.cs" t="Include" />
+            <e p="StateRotateLeft.cs" t="Include" />
+            <e p="StateRotateRight.cs" t="Include" />
+            <e p="StateScaler.cs" t="Include" />
+          </e>
+          <e p="StateMachineV2" t="Include">
+            <e p="Action.cs" t="Include" />
+            <e p="ActionData.cs" t="Include" />
+            <e p="ChaseAction.cs" t="Include" />
+            <e p="Decision.cs" t="Include" />
+            <e p="EnemyDetectedDecision.cs" t="Include" />
+            <e p="GetUprightAction.cs" t="Include" />
+            <e p="SlimeNotUprightDecision.cs" t="Include" />
+            <e p="State.cs" t="Include" />
+            <e p="StateController.cs" t="Include" />
+            <e p="StateData.cs" t="Include" />
+            <e p="Transition.cs" t="Include" />
+            <e p="WanderAction.cs" t="Include" />
+          </e>
           <e p="Trigger.cs" t="Include" />
           <e p="Triggerable.cs" t="Include" />
         </e>
