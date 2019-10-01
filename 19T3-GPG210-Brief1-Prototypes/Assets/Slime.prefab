@@ -265,6 +265,7 @@ MonoBehaviour:
   rotateLeftState: {fileID: 5342603693628144781}
   rotateRightState: {fileID: 5342603693628144780}
   feedState: {fileID: 6397962600505000600}
+  slimeInputManager: {fileID: 0}
 --- !u!114 &5342603693628144788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -277,6 +278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b012df20c4560ac4bbfaa8086a6220b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  owner: {fileID: 5342603693628144789}
   nextState: {fileID: 0}
 --- !u!114 &5342603693628144795
 MonoBehaviour:
@@ -290,6 +292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d15eba6ecc9d0e240ae34624f8e05c6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  owner: {fileID: 5342603693628144789}
   nextState: {fileID: 5342603693628144783}
 --- !u!114 &5342603693628144787
 MonoBehaviour:
@@ -303,6 +306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e979a74100600a428734509e3ec1a4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  owner: {fileID: 5342603693628144789}
   nextState: {fileID: 5342603693628144783}
 --- !u!114 &5342603693628144781
 MonoBehaviour:
@@ -316,7 +320,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9112b99595a552f468a496923d7db94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  owner: {fileID: 5342603693628144789}
   nextState: {fileID: 5342603693628144783}
+  rotationSpeed: 60
 --- !u!114 &5342603693628144780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -329,7 +335,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7386f532d15d5d44e944e475ab62497b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  owner: {fileID: 5342603693628144789}
   nextState: {fileID: 5342603693628144783}
+  rotationSpeed: 60
 --- !u!114 &5342603693628144782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -342,6 +350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c83b6167995d5342a0b29ef25f06175, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  owner: {fileID: 5342603693628144789}
   nextState: {fileID: 5342603693628144783}
 --- !u!114 &5342603693628144783
 MonoBehaviour:
@@ -355,6 +364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 254c8089d39d8234d8eb8f61d2d71fd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  owner: {fileID: 5342603693628144789}
   nextState: {fileID: 0}
   maxScale: {x: 1.5, y: 1.6, z: 1.4}
   minScale: {x: 0.5, y: 0.6, z: 0.5}
@@ -386,6 +396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdb705275a5c0664dbd50aa422e05285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  owner: {fileID: 5342603693628144789}
   nextState: {fileID: 5342603693628144783}
   feedExhaust: {fileID: 8247595358811638699}
   slimeFeedPrefab: {fileID: 6207340298185299616, guid: 4839d2ba9490dd145a6c9456adceff8a,

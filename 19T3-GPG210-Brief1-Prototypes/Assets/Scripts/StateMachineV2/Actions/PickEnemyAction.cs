@@ -24,7 +24,7 @@ public class PickEnemyAction : Action
 
     public override void Act(StateController controller, ActionData actionData)
     {
-        if (controller.inputManager.currentTarget == null || controller.inputManager.enemiesInSight == null || controller.inputManager.enemiesInSight.Count == 0)
+        if (controller.inputManager.currentTarget != null || controller.inputManager.enemiesInSight == null || controller.inputManager.enemiesInSight.Count == 0)
             return;
 
         Slime me = controller.GetComponent<Slime>();
@@ -55,6 +55,7 @@ public class PickEnemyAction : Action
                 else
                 {
                     target = enemy;
+                    targetDistance = enemyDistance;
                 }
             }
             else

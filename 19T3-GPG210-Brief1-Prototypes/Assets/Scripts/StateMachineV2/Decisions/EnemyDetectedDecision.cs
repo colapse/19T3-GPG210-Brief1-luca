@@ -12,6 +12,8 @@ public class EnemyDetectedDecision : Decision
 
     private bool EnemyDetected(StateController controller)
     {
+        // Delete all null values in the list
+        controller.inputManager.enemiesInSight.RemoveAll(x => x == null);
       // Check if player is detected
       return (controller.inputManager.enemiesInSight.Count > 0);
     }
