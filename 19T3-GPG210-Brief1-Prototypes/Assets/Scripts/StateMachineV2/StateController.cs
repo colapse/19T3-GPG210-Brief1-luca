@@ -26,26 +26,47 @@ public class StateController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        currentState?.UpdateState(this, stateDataDict[currentState]);
+        currentState?.UpdateState(this, (stateDataDict.ContainsKey(currentState)?stateDataDict[currentState]:null));
     }
 
-    public void TransitionToState(State newState)
+    public void TransitionToState(State newState, float transitionTime)
     {
-        State nextState = newState;
-        
-        if (newState == remainStateID)
+        if (newState.Equals(remainStateID))
+        {
             return;
-        else if (newState == lastStateID && previousState != null)
+        }
+        StartCoroutine(TransitToState(newState, transitionTime));
+    }
+
+    IEnumerator TransitToState(State newState, float transitionTime)
+    {
+        State tmpCurrentState = currentState;
+        currentState = null;
+        
+        if(transitionTime > 0)
+            yield return new WaitForSeconds(transitionTime);
+        
+        State nextState = newState;
+
+        /*
+        if (newState == remainStateID)
+        {
+            currentState = tmpCurrentState;
+            yield return 0;
+        }
+        else */if (newState == lastStateID && previousState != null)
             nextState = previousState;
 
-        previousState = currentState;
+        previousState = tmpCurrentState;
         StoreStateData(nextState);
         
-        currentState?.OnExitState(this, stateDataDict[currentState]);
+        tmpCurrentState?.OnExitState(this, (stateDataDict.ContainsKey(tmpCurrentState)?stateDataDict[tmpCurrentState]:null));
         
         currentState = nextState;
         
-        currentState?.OnEnterState(this, stateDataDict[currentState]);
+        currentState?.OnEnterState(this, (stateDataDict.ContainsKey(tmpCurrentState)?stateDataDict[tmpCurrentState]:null));
+
+        yield return 0;
     }
 
     private void StoreStateData(State state)
@@ -59,11 +80,12 @@ public class StateController : MonoBehaviour
             if (action.data != null && action.data.Count > 0)
             {
                 ActionData ad = new ActionData();
-
+                ad.objectData = new Dictionary<string, object>(action.data);
+                /*
                 foreach (var data in action.data)
                 {
                     ad.objectData.Add(data.Key,data.Value);
-                }
+                }*/
                 stateDataDict[state].actionData.Add(action,ad);
             }
         }

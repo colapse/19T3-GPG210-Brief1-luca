@@ -4,6 +4,8 @@ namespace StateMachineV1
 {
     public class StateRotateLeft : StateBase
     {
+        public float rotationSpeed = 5; // Degree per second
+        
         public override void Enter()
         {
         }
@@ -14,7 +16,7 @@ namespace StateMachineV1
 
         public override void Execute()
         {
-            transform.Rotate(Vector3.up,-5);
+            transform.Rotate(Vector3.up,-rotationSpeed * Time.deltaTime);
         
             if(/*Input.GetKeyUp(KeyCode.LeftArrow)*/ !owner.slimeInputManager.inputTurnLeft)
                 GetComponent<StateManager>()?.ChangeState(nextState);

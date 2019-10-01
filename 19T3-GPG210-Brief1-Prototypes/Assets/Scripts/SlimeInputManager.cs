@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,7 +11,15 @@ public class SlimeInputManager : MonoBehaviour
     public bool inputTurnRight = false;
     public bool inputSplit = false;
     public bool inputFeed = false;
-    
+
+    public List<Slime> enemiesInSight;
+    public Slime currentTarget;
+
+    private void Start()
+    {
+        enemiesInSight = new List<Slime>();
+    }
+
     // HACK. Shouldnt be in here
     public bool IsGrounded()
     {

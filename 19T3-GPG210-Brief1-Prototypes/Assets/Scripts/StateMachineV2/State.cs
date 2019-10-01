@@ -49,7 +49,7 @@ public class State : ScriptableObject
         foreach (Transition transition in transitions)
         {
             bool decisionSucceeded = transition.decision.Decide(controller);
-            controller.TransitionToState((decisionSucceeded ? transition.trueState : transition.falseState));
+            controller.TransitionToState((decisionSucceeded ? transition.trueState : transition.falseState), (decisionSucceeded ? transition.trueTransitionTime : transition.falseTransitionTime));
         }
     }
 }

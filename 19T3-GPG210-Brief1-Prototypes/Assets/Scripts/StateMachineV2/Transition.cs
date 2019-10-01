@@ -8,4 +8,6 @@ public class Transition
     public Decision decision;
     public State trueState;
     public State falseState;
+    public float trueTransitionTime;
+    public float falseTransitionTime;
 }

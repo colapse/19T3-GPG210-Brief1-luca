@@ -12,3 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00bc74a19cf659a4f8fe37b35263802d, type: 3}
   m_Name: WanderAction
   m_EditorClassIdentifier: 
+  data:
+    m_keys:
+    - ExitPosition
+    - WaitForSeconds
+    - StartRotation
+    - Rotate
+  rotateJumpTreshold: 0.5
+  rotationAngle: 45
