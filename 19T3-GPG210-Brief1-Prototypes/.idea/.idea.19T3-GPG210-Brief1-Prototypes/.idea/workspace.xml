@@ -3,15 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="ef4ac5ec-078c-4fb1-8d67-0e887f987c8e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.19T3-GPG210-Brief1-Prototypes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.19T3-GPG210-Brief1-Prototypes/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Slime.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Slime.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SlimePuzzles.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SlimePuzzles.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/AI/Decision/TargetTooFarAway.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/AI/Decision/TargetTooFarAway.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateForwardJump.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateForwardJump.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Slime.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Slime.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/1fde85-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/1fde85-mainStage.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/4b738c-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/4b738c-mainStage.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/assetDatabase3" beforeDir="false" afterPath="$PROJECT_DIR$/Library/assetDatabase3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/metadata/0c/0c83b6167995d5342a0b29ef25f06175" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/0c/0c83b6167995d5342a0b29ef25f06175" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/36/366f15246a7cd6549a7cff5f13fbf6c6" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/36/366f15246a7cd6549a7cff5f13fbf6c6" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/88/886b1581e2c87034989b1b21d6d0f584" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/88/886b1581e2c87034989b1b21d6d0f584" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -174,7 +176,7 @@
       <workItem from="1569833036246" duration="1702000" />
       <workItem from="1569903004232" duration="10601000" />
       <workItem from="1569928092793" duration="2760000" />
-      <workItem from="1569972792186" duration="10122000" />
+      <workItem from="1569972792186" duration="12100000" />
     </task>
     <servers />
   </component>

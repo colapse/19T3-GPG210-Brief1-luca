@@ -32,6 +32,8 @@ namespace StateMachineV1
 
         public override void Execute()
         {
+            Slime slime = GetComponent<Slime>();
+            
             if (jumpCharge < 3 && owner.slimeInputManager.inputForwardJump)
             {
                 jumpCharge += Time.deltaTime*6;
@@ -39,8 +41,8 @@ namespace StateMachineV1
         
             if (!jumped && (!owner.slimeInputManager.inputForwardJump || jumpCharge >= 3))
             {
-                Vector3 forwardJumpForce = transform.forward * jumpForce;
-                forwardJumpForce.y = jumpForce;
+                Vector3 forwardJumpForce = slime.Volume * jumpForce * transform.forward;
+                forwardJumpForce.y = slime.Volume * jumpForce;
         
                 rb.AddForce(forwardJumpForce*jumpCharge);
                 jumped = true;

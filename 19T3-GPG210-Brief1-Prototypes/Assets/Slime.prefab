@@ -352,6 +352,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   owner: {fileID: 5342603693628144789}
   nextState: {fileID: 5342603693628144783}
+  jumpForce: 20
 --- !u!114 &5342603693628144783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -383,7 +384,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   freeFeed: 0
   rb: {fileID: 5342603693628144790}
-  volume: 6
+  volume: 8
 --- !u!114 &6397962600505000600
 MonoBehaviour:
   m_ObjectHideFlags: 0
