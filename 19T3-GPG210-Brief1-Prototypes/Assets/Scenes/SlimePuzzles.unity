@@ -3958,6 +3958,11 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5342603693628144782, guid: 886b1581e2c87034989b1b21d6d0f584,
+        type: 3}
+      propertyPath: jumpForce
+      value: 120
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 886b1581e2c87034989b1b21d6d0f584, type: 3}
 --- !u!1 &1626387425
@@ -5081,6 +5086,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   owner: {fileID: 6273345690183667987}
   nextState: {fileID: 6273345690183667977}
+  jumpForce: 120
 --- !u!114 &6273345690183667977
 MonoBehaviour:
   m_ObjectHideFlags: 0

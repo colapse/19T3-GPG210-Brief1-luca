@@ -2,30 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef4ac5ec-078c-4fb1-8d67-0e887f987c8e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/JumpAttackAction.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/JumpAttackAction.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/SplitAttackAction.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/SplitAttackAction.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/TargetInRangeAction.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/TargetInRangeAction.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Decisions/TargetTwiceSmallerDecision.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Decisions/TargetTwiceSmallerDecision.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.19T3-GPG210-Brief1-Prototypes/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.19T3-GPG210-Brief1-Prototypes/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.19T3-GPG210-Brief1-Prototypes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.19T3-GPG210-Brief1-Prototypes/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SlimePuzzles.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SlimePuzzles.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/AI/Decision/TargetInRange.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/AI/Decision/TargetInRange.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/AI/Decision/TargetTooFarAway.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/AI/Decision/TargetTooFarAway.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/AI/EnemySlime/ChasingState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/AI/EnemySlime/ChasingState.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/AI/EnemySlime/FleeingState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/AI/EnemySlime/FleeingState.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/GetUprightAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/GetUprightAction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/State.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/State.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Slime.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Slime.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateForwardJump.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateForwardJump.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/1fde85-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/1fde85-mainStage.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/4b738c-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/4b738c-mainStage.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/assetDatabase3" beforeDir="false" afterPath="$PROJECT_DIR$/Library/assetDatabase3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/0c/0c83b6167995d5342a0b29ef25f06175" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/0c/0c83b6167995d5342a0b29ef25f06175" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/36/366f15246a7cd6549a7cff5f13fbf6c6" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/36/366f15246a7cd6549a7cff5f13fbf6c6" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,6 +27,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PressurePlateTrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Decisions/EnemyWeakerDecision.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Decisions/TargetTwiceSmallerDecision.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateForwardJump.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateJump.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateRotateLeft.cs" root0="FORCE_HIGHLIGHTING" />
@@ -76,7 +63,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/StateRotateRight.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateScaler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateRandomPush.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateJump.cs" />
@@ -92,7 +78,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/StateData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateBase.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateFeed.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateForwardJump.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateIdle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateRandomPush.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateScaler.cs" />
@@ -127,6 +112,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Decisions/TargetTwiceSmallerDecision.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/JumpAttackAction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/GetUprightAction.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slime.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateForwardJump.cs" />
       </list>
     </option>
   </component>
@@ -187,7 +174,7 @@
       <workItem from="1569833036246" duration="1702000" />
       <workItem from="1569903004232" duration="10601000" />
       <workItem from="1569928092793" duration="2760000" />
-      <workItem from="1569972792186" duration="9266000" />
+      <workItem from="1569972792186" duration="10122000" />
     </task>
     <servers />
   </component>

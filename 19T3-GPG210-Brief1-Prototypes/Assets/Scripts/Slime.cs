@@ -40,7 +40,7 @@ public class Slime : MonoBehaviour
 
     void OnVolumeChanged(float newValue)
     {
-        transform.localScale = Vector3.one * newValue;
+        transform.localScale = Vector3.one * newValue * 0.5f;
     }
 
     private void OnCollisionEnter(Collision other)

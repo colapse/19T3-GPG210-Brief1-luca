@@ -4,6 +4,8 @@ namespace StateMachineV1
 {
     public class StateForwardJump : StateBase
     {
+        public float jumpForce = 150;
+        
         Rigidbody rb;
         float distanceToGround = 0;
 
@@ -37,8 +39,8 @@ namespace StateMachineV1
         
             if (!jumped && (!owner.slimeInputManager.inputForwardJump || jumpCharge >= 3))
             {
-                Vector3 forwardJumpForce = transform.forward * 100;
-                forwardJumpForce.y = 100;
+                Vector3 forwardJumpForce = transform.forward * jumpForce;
+                forwardJumpForce.y = jumpForce;
         
                 rb.AddForce(forwardJumpForce*jumpCharge);
                 jumped = true;
