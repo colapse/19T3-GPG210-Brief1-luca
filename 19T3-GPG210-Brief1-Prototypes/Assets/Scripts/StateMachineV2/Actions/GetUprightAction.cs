@@ -14,7 +14,6 @@ public class GetUprightAction : Action
 
     public override void Act(StateController controller, ActionData actionData)
     {
-        Debug.Log("Trying to get upright");
         if (!controller.inputManager.IsGrounded())
         {
             controller.inputManager.inputJump = false;

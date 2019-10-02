@@ -85,7 +85,10 @@
      <Compile Include="Assets\Scripts\StateMachineV2\Actions\ChaseAction.cs" />
      <Compile Include="Assets\Scripts\StateMachineV2\Actions\FleeAction.cs" />
      <Compile Include="Assets\Scripts\StateMachineV2\Actions\GetUprightAction.cs" />
+     <Compile Include="Assets\Scripts\StateMachineV2\Actions\JumpAttackAction.cs" />
      <Compile Include="Assets\Scripts\StateMachineV2\Actions\PickEnemyAction.cs" />
+     <Compile Include="Assets\Scripts\StateMachineV2\Actions\SplitAttackAction.cs" />
+     <Compile Include="Assets\Scripts\StateMachineV2\Actions\TargetInRangeAction.cs" />
      <Compile Include="Assets\Scripts\StateMachineV2\Actions\WanderAction.cs" />
      <Compile Include="Assets\Scripts\StateMachineV2\Decision.cs" />
      <Compile Include="Assets\Scripts\StateMachineV2\Decisions\EnemyDetectedDecision.cs" />
@@ -95,6 +98,7 @@
      <Compile Include="Assets\Scripts\StateMachineV2\Decisions\SlimeNotUprightDecision.cs" />
      <Compile Include="Assets\Scripts\StateMachineV2\Decisions\TargetInRange.cs" />
      <Compile Include="Assets\Scripts\StateMachineV2\Decisions\TargetTooFarAway.cs" />
+     <Compile Include="Assets\Scripts\StateMachineV2\Decisions\TargetTwiceSmallerDecision.cs" />
      <Compile Include="Assets\Scripts\StateMachineV2\State.cs" />
      <Compile Include="Assets\Scripts\StateMachineV2\StateController.cs" />
      <Compile Include="Assets\Scripts\StateMachineV2\StateData.cs" />

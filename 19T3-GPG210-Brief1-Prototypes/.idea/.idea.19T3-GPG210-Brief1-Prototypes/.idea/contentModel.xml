@@ -47,7 +47,10 @@
               <e p="ChaseAction.cs" t="Include" />
               <e p="FleeAction.cs" t="Include" />
               <e p="GetUprightAction.cs" t="Include" />
+              <e p="JumpAttackAction.cs" t="Include" />
               <e p="PickEnemyAction.cs" t="Include" />
+              <e p="SplitAttackAction.cs" t="Include" />
+              <e p="TargetInRangeAction.cs" t="Include" />
               <e p="WanderAction.cs" t="Include" />
             </e>
             <e p="Decision.cs" t="Include" />
@@ -59,6 +62,7 @@
               <e p="SlimeNotUprightDecision.cs" t="Include" />
               <e p="TargetInRange.cs" t="Include" />
               <e p="TargetTooFarAway.cs" t="Include" />
+              <e p="TargetTwiceSmallerDecision.cs" t="Include" />
             </e>
             <e p="State.cs" t="Include" />
             <e p="StateController.cs" t="Include" />

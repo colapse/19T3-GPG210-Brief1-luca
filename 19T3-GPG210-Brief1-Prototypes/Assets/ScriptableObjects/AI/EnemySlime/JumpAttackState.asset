@@ -10,18 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a4859e939be6bc4285d8b31fe35fd1e, type: 3}
-  m_Name: FleeingState
+  m_Name: JumpAttackState
   m_EditorClassIdentifier: 
-  actions: []
+  actions:
+  - {fileID: 11400000, guid: b439b764479485447bf797919cdd9042, type: 2}
   transitions:
-  - decision: {fileID: 11400000, guid: 02829c3cf28459044bb5d0871ca4b2c7, type: 2}
+  - decision: {fileID: 11400000, guid: e44b5333398e50f45a22ab3428ed82b5, type: 2}
     trueState: {fileID: 11400000, guid: 5d66e55392ce9144abfa5bf56871b1b1, type: 2}
     falseState: {fileID: 11400000, guid: 3adb52c9f166b9045983050e70b1113b, type: 2}
     trueTransitionTime: 0
     falseTransitionTime: 0
-  - decision: {fileID: 11400000, guid: e44b5333398e50f45a22ab3428ed82b5, type: 2}
+  - decision: {fileID: 11400000, guid: b9c7b40c2cde5a04e8545ce12ff25620, type: 2}
     trueState: {fileID: 11400000, guid: 5d66e55392ce9144abfa5bf56871b1b1, type: 2}
-    falseState: {fileID: 11400000, guid: 082e6a7422a07bb44a4c5c2466daa2b4, type: 2}
+    falseState: {fileID: 11400000, guid: bc387e5bc66108047816f3ef323e1b33, type: 2}
     trueTransitionTime: 0
     falseTransitionTime: 0
   sceneGizmoColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}

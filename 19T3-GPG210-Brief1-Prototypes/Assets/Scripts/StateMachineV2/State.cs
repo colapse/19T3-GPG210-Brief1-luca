@@ -12,11 +12,15 @@ public class State : ScriptableObject
 
     public void OnEnterState(StateController controller, StateData stateData)
     {
-        foreach (Action action in actions)
+        if (actions.Length > 0)
         {
-            ActionData data = stateData.actionData.ContainsKey(action)?stateData.actionData[action]:null;
-            action.OnEnter(controller, data);
+            foreach (Action action in actions)
+            {
+                ActionData data = (stateData?.actionData.ContainsKey(action)??false)?stateData.actionData[action]:null;
+                action.OnEnter(controller, data);
+            }
         }
+        
     }
     
     public void UpdateState(StateController controller, StateData stateData)
@@ -27,21 +31,29 @@ public class State : ScriptableObject
     
     public void OnExitState(StateController controller, StateData stateData)
     {
-        foreach (Action action in actions)
+        if (actions.Length > 0)
         {
-            ActionData data = stateData.actionData.ContainsKey(action)?stateData.actionData[action]:null;
-            action.OnExit(controller, data);
+            foreach (Action action in actions)
+            {
+                ActionData data = (stateData?.actionData.ContainsKey(action)??false)?stateData.actionData[action]:null;
+                action.OnExit(controller, data);
+            }
         }
+        
     }
 
     private void DoActions(StateController controller, StateData stateData)
     {
-        foreach (Action action in actions)
+        if (actions.Length > 0)
         {
-            // TODO; Inperformant?
-            ActionData data = stateData.actionData.ContainsKey(action)?stateData.actionData[action]:null;
-            action.Act(controller, data);
+            foreach (Action action in actions)
+            {
+                // TODO; Inperformant?
+                ActionData data = (stateData?.actionData.ContainsKey(action)??false)?stateData.actionData[action]:null;
+                action.Act(controller, data);
+            }
         }
+        
     }
 
     private void CheckTransition(StateController controller)
