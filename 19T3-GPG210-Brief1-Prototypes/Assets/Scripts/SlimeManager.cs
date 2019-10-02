@@ -79,7 +79,9 @@ public class SlimeManager : MonoBehaviour
     {
         if (slime.Volume >= slimeMinVolume * 2 && slimePrefab)
         {
-            GameObject newSlimeObj = Instantiate(slimePrefab,slime.transform.position,slime.transform.rotation);
+            Renderer slimeRenderer = slime.GetComponent<Renderer>();
+            Vector3 newSlimeSpawnPos = slime.transform.position + slime.transform.forward.normalized * (slimeRenderer.bounds.extents.z);
+            GameObject newSlimeObj = Instantiate(slimePrefab,newSlimeSpawnPos,slime.transform.rotation);
             Slime newSlime = newSlimeObj.GetComponent<Slime>();
             StateManager newSlimeStateManager = newSlimeObj.GetComponent<StateManager>();
 
@@ -92,8 +94,10 @@ public class SlimeManager : MonoBehaviour
                 slimes.Add(newSlime);
             
             // Push slimes apart from each other
-            newSlime.rb.AddForce(slime.transform.right*30*newSlime.Volume);
-            slime.rb.AddForce(slime.transform.right*-30*newSlime.Volume);
+            Vector3 forwardForce = newSlime.Volume * 200 * slime.transform.forward;
+            forwardForce.y = newSlime.Volume * 50;
+            newSlime.rb.AddForce(forwardForce);
+            //slime.rb.AddForce(slime.transform.right*-30*newSlime.Volume);
         }
     }
 }

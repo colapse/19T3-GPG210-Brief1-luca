@@ -3,31 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="ef4ac5ec-078c-4fb1-8d67-0e887f987c8e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.19T3-GPG210-Brief1-Prototypes/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.19T3-GPG210-Brief1-Prototypes/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.19T3-GPG210-Brief1-Prototypes/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.19T3-GPG210-Brief1-Prototypes/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.19T3-GPG210-Brief1-Prototypes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.19T3-GPG210-Brief1-Prototypes/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SlimePuzzles.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SlimePuzzles.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/AI/EnemySlime/GetUprightState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/AI/EnemySlime/GetUprightState.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/AI/EnemySlime/WanderAction.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/AI/EnemySlime/WanderAction.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/AI/EnemySlime/WanderingState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/AI/EnemySlime/WanderingState.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SlimeInputManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SlimeInputManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateRotateLeft.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateRotateLeft.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateRotateRight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateRotateRight.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/ChaseAction.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/ChaseAction.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/EnemyDetectedDecision.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/EnemyDetectedDecision.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/GetUprightAction.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/GetUprightAction.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/SlimeNotUprightDecision.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/SlimeNotUprightDecision.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/State.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/State.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/StateController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/StateController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Transition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Transition.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/WanderAction.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/WanderAction.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SlimeManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SlimeManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Decision.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Decision.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Slime.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Slime.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/APIUpdater/project-dependencies.graph" beforeDir="false" afterPath="$PROJECT_DIR$/Library/APIUpdater/project-dependencies.graph" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/CurrentLayout-default.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/CurrentLayout-default.dwlt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
@@ -49,7 +32,6 @@
       <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/1fde85-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/1fde85-mainStage.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/4b738c-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/4b738c-mainStage.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/assetDatabase3" beforeDir="false" afterPath="$PROJECT_DIR$/Library/assetDatabase3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/expandedItems" beforeDir="false" afterPath="$PROJECT_DIR$/Library/expandedItems" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/metadata/00/00000000000000002000000000000000" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/00/00000000000000002000000000000000" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/metadata/00/00000000000000003000000000000000" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/00/00000000000000003000000000000000" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/metadata/00/00000000000000004000000000000000" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/00/00000000000000004000000000000000" afterDir="false" />
@@ -167,6 +149,8 @@
       <change beforePath="$PROJECT_DIR$/Library/metadata/86/8620e97e7e9859049934889a52248435" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/86/8620e97e7e9859049934889a52248435" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/metadata/86/86cacab070a0a46e99aedb596a32c4fe" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/86/86cacab070a0a46e99aedb596a32c4fe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/metadata/87/8795e0dd0041d2f44b1fe1959fc9fb53" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/87/8795e0dd0041d2f44b1fe1959fc9fb53" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/88/886b1581e2c87034989b1b21d6d0f584" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/88/886b1581e2c87034989b1b21d6d0f584" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/88/886b1581e2c87034989b1b21d6d0f584.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/88/886b1581e2c87034989b1b21d6d0f584.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/metadata/8b/8b7d06780fca6fc4384580d3ebed9219" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/8b/8b7d06780fca6fc4384580d3ebed9219" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/metadata/8e/8e78f8a8575e4a04f8337a54e241cdc5" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/8e/8e78f8a8575e4a04f8337a54e241cdc5" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/metadata/91/9112b99595a552f468a496923d7db94b" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/91/9112b99595a552f468a496923d7db94b" afterDir="false" />
@@ -277,7 +261,6 @@
       <change beforePath="$PROJECT_DIR$/Library/metadata/ff/ffcbe86028d681144b703991885c535a" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/ff/ffcbe86028d681144b703991885c535a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -290,39 +273,40 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Helper/SerializeableDictionary/UserSerializableDictionaries.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Decisions/HasTargetDecision.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/StateController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Decisions/EnemyDetectedDecision.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyScanner.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Action.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Door.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PressurePlateTrigger.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/WanderAction.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateRotateRight.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Trigger.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateRotateLeft.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/State.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/PickEnemyAction.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Triggerable.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Transition.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/ChaseAction.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SlimeManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateJump.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Slime.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Decisions/EnemyWeakerDecision.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Decisions/EnemyStrongerDecision.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/FleeAction.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SlimeInputManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerInputManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PressurePlate.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PressurePlateTrigger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Decisions/EnemyWeakerDecision.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateJump.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateRotateLeft.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyScanner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateRotateRight.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Triggerable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/FleeAction.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Decisions/HasTargetDecision.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Decisions/EnemyDetectedDecision.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Trigger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Helper/SerializeableDictionary/UserSerializableDictionaries.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Decisions/EnemyStrongerDecision.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SlimeInputManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Decisions/TargetTooFarAway.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/PickEnemyAction.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerInputManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Action.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/ChaseAction.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Door.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/WanderAction.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Decision.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SlimeManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Slime.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/State.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/StateController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Decisions/TargetInRange.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Transition.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Trigger.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Triggerable.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Door.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Slime.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateBase.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/StateWander.cs" />
@@ -335,10 +319,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/StateIdle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateFeed.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerInputManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SlimeManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateForwardJump.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Decision.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/PlayerDetectedDecision.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Helper/SerializeableDictionary/UserSerializableDictionaries.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Action.cs" />
@@ -355,7 +337,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/SlimeNotUprightDecision.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/GetUprightAction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateJump.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Transition.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/State.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/StateController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateRotateLeft.cs" />
@@ -371,6 +352,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/ChaseAction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Decisions/EnemyDetectedDecision.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Decisions/HasTargetDecision.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SlimeManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Transition.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Decisions/TargetInDistance.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Decision.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Decisions/TargetTooFarAway.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Decisions/TargetInRange.cs" />
       </list>
     </option>
   </component>
@@ -431,6 +418,7 @@
       <workItem from="1569833036246" duration="1702000" />
       <workItem from="1569903004232" duration="10601000" />
       <workItem from="1569928092793" duration="2760000" />
+      <workItem from="1569972792186" duration="5284000" />
     </task>
     <servers />
   </component>
@@ -467,10 +455,10 @@
           <line>43</line>
           <properties documentPath="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/ChaseAction.cs" initialLine="43">
             <startOffsets>
-              <option value="1058" />
+              <option value="-1" />
             </startOffsets>
             <endOffsets>
-              <option value="1108" />
+              <option value="-1" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="3" />
