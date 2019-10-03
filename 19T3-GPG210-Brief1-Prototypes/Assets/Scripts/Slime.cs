@@ -49,7 +49,8 @@ public class Slime : MonoBehaviour
 
     void OnVolumeChanged(float newValue)
     {
-        transform.localScale = Vector3.one * newValue * 0.5f;
+        transform.localScale = 0.5f * newValue * Vector3.one;
+        rb.mass = newValue * 2;
     }
 
     private void OnCollisionEnter(Collision other)
@@ -57,21 +58,22 @@ public class Slime : MonoBehaviour
         Slime otherSlime = other.collider.GetComponent<Slime>();
         if (otherSlime != null && (other.impulse.magnitude > 2 || freeFeed || otherSlime.freeFeed))
         {
-            if (otherSlime.Volume > volume)
+            /*if (otherSlime.Volume > volume)
             {
                 // This Slime is smaller, gets eaten
                 //StartCoroutine(DeleteSlime()); // Ugly solution. Waits for a second to make sure the CollisionEnter method in the other slime is fully executed
                 Destroy(gameObject);
-            }else if (otherSlime.Volume < volume)
+            }else */
+            if (otherSlime.Volume < volume)
             {
                 // This Slime is bigger, eats the smaller one
+                other.gameObject.GetComponent<Collider>().enabled = false;
+                Destroy(other.gameObject);
                 Volume += otherSlime.Volume;
             }
-            else
-            {
-                // Same Size nothig happens
-            }
-            Debug.Log("Collision between Slimes "+Volume+" Impulse: "+other.impulse.magnitude+" Rel. Velocity: "+other.relativeVelocity);
+            
+            
+            //Debug.Log("Collision between Slimes "+Volume+" Impulse: "+other.impulse.magnitude+" Rel. Velocity: "+other.relativeVelocity);
         }
     }
 

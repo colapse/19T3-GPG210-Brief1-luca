@@ -39,10 +39,10 @@ namespace StateMachineV1
                 jumpCharge += Time.deltaTime*6;
             }
         
-            if (!jumped && (!owner.slimeInputManager.inputForwardJump || jumpCharge >= 3))
+            if (IsGrounded() && !jumped && (!owner.slimeInputManager.inputForwardJump || jumpCharge >= 3))
             {
-                Vector3 forwardJumpForce = slime.Volume * jumpForce * transform.forward;
-                forwardJumpForce.y = slime.Volume * jumpForce;
+                Vector3 forwardJumpForce = (slime.rb.mass) * jumpForce * transform.forward;
+                forwardJumpForce.y = 1.5f * slime.rb.mass * jumpForce;
         
                 rb.AddForce(forwardJumpForce*jumpCharge);
                 jumped = true;

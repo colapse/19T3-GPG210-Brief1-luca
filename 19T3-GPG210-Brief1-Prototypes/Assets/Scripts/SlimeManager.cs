@@ -94,8 +94,8 @@ public class SlimeManager : MonoBehaviour
                 slimes.Add(newSlime);
             
             // Push slimes apart from each other
-            Vector3 forwardForce = newSlime.Volume * 200 * slime.transform.forward;
-            forwardForce.y = newSlime.Volume * 50;
+            Vector3 forwardForce = slime.rb.mass * newSlime.Volume * slime.splitForceMultiplier * slime.transform.forward;
+            forwardForce.y = 10 * slime.rb.mass;
             newSlime.rb.AddForce(forwardForce);
             //slime.rb.AddForce(slime.transform.right*-30*newSlime.Volume);
         }

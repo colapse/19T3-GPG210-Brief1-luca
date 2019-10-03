@@ -26,27 +26,30 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Decision.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TriggerSystemV2/Trigger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TriggerSystemV2/TriggerRequirement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Helper/SerializeableDictionary/UserSerializableDictionaries.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Decisions/HasTargetDecision.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/JumpAttackAction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/TargetInRangeAction.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TriggerSystemV2/FloatRangeRequirement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/SplitAttackAction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/StateController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TriggerSystemV2/PressurePlateTrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Decisions/EnemyDetectedDecision.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Decisions/TargetInRange.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Decisions/TargetTooFarAway.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TriggerSystemV2/IntTriggerRequirement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyScanner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Action.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Decisions/TargetTwiceSmallerDecision.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Door.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PressurePlateTrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/WanderAction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateRotateRight.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Trigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateRotateLeft.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/State.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/PickEnemyAction.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Triggerable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TriggerSystemV1/Trigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/GetUprightAction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/ChaseAction.cs" root0="FORCE_HIGHLIGHTING" />
@@ -58,23 +61,15 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Decisions/EnemyStrongerDecision.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateForwardJump.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/FleeAction.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TriggerSystemV2/Triggerable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SlimeInputManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Helper/MathHelper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TriggerSystemV2/DoorV2.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerInputManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PressurePlate.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/StateJump.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/StateIdle.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/StateFeed.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerInputManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/StateManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/StateForwardJump.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/PlayerDetectedDecision.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Helper/SerializeableDictionary/UserSerializableDictionaries.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Action.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/ChaseAction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/StateData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateBase.cs" />
@@ -97,7 +92,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Decisions/EnemyWeakerDecision.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Decisions/EnemyDetectedDecision.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Decisions/HasTargetDecision.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SlimeManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Transition.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Decisions/TargetInDistance.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Decision.cs" />
@@ -105,18 +99,28 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/TargetInRangeAction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/JumpAttackAction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/GetUprightAction.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateForwardJump.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Decisions/TargetInRange.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Decisions/TargetTwiceSmallerDecision.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/FleeAction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/SplitAttackAction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/State.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Helper/MathHelper.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Slime.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/PickEnemyAction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/WanderAction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SlimeInputManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/ChaseAction.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SlimeManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slime.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateForwardJump.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TestClass.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Door.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TriggerSystemV2/FloatRangeRequirement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TriggerSystemV2/IntTriggerRequirement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TriggerSystemV2/Trigger.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TriggerSystemV2/PressurePlateTrigger.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TriggerSystemV2/TriggerRequirement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TriggerSystemV2/Triggerable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TriggerSystemV2/DoorV2.cs" />
       </list>
     </option>
   </component>
@@ -179,7 +183,8 @@
       <workItem from="1569928092793" duration="2760000" />
       <workItem from="1569972792186" duration="12100000" />
       <workItem from="1570056902288" duration="3469000" />
-      <workItem from="1570075898606" duration="9736000" />
+      <workItem from="1570075898606" duration="15296000" />
+      <workItem from="1570103941887" duration="15476000" />
     </task>
     <servers />
   </component>

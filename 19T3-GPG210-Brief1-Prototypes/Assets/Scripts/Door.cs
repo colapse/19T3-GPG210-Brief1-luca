@@ -1,9 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Security.Cryptography.X509Certificates;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
-public class Door : MonoBehaviour
+public class Door : SerializedMonoBehaviour
 {
     private Collider collider;
     private Renderer renderer;

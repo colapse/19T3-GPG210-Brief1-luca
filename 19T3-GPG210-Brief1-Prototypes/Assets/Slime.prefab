@@ -352,7 +352,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   owner: {fileID: 5342603693628144789}
   nextState: {fileID: 5342603693628144783}
-  jumpForce: 20
+  jumpForce: 50
 --- !u!114 &5342603693628144783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -382,9 +382,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 366f15246a7cd6549a7cff5f13fbf6c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialAngle: 0
+  splitForceMultiplier: 150
   freeFeed: 0
   rb: {fileID: 5342603693628144790}
-  volume: 8
+  volume: 12
 --- !u!114 &6397962600505000600
 MonoBehaviour:
   m_ObjectHideFlags: 0

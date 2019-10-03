@@ -22,10 +22,7 @@
               <e p="UserSerializableDictionaries.cs" t="Include" />
             </e>
           </e>
-          <e p="MultiStagePressurePlate.cs" t="Include" />
           <e p="PlayerInputManager.cs" t="Include" />
-          <e p="PressurePlate.cs" t="Include" />
-          <e p="PressurePlateTrigger.cs" t="Include" />
           <e p="Slime.cs" t="Include" />
           <e p="SlimeInputManager.cs" t="Include" />
           <e p="SlimeManager.cs" t="Include" />
@@ -70,8 +67,24 @@
             <e p="StateData.cs" t="Include" />
             <e p="Transition.cs" t="Include" />
           </e>
-          <e p="Trigger.cs" t="Include" />
-          <e p="Triggerable.cs" t="Include" />
+          <e p="TriggerSystemV0" t="Include">
+            <e p="MultiStagePressurePlate.cs" t="Include" />
+            <e p="PressurePlate.cs" t="Include" />
+          </e>
+          <e p="TriggerSystemV1" t="Include">
+            <e p="PressurePlateTrigger.cs" t="Include" />
+            <e p="Trigger.cs" t="Include" />
+            <e p="Triggerable.cs" t="Include" />
+          </e>
+          <e p="TriggerSystemV2" t="Include">
+            <e p="DoorV2.cs" t="Include" />
+            <e p="FloatRangeRequirement.cs" t="Include" />
+            <e p="IntTriggerRequirement.cs" t="Include" />
+            <e p="PressurePlateTrigger.cs" t="Include" />
+            <e p="Trigger.cs" t="Include" />
+            <e p="Triggerable.cs" t="Include" />
+            <e p="TriggerRequirement.cs" t="Include" />
+          </e>
         </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />
