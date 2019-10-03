@@ -9,6 +9,13 @@ namespace StateMachineV2.Actions
         public override void OnEnter(StateController controller, ActionData actionData)
         {
             Debug.Log("Split Attack!");
+            Slime slime = controller.GetComponent<Slime>();
+            if (slime != null && controller.inputManager.currentTarget != null)
+            {
+                Vector3 requiredForce =
+                    slime.CalculateSplitForceNeeded(controller.inputManager.currentTarget.transform.position);
+                slime.SplitSlime(requiredForce);
+            }
         }
 
         public override void Act(StateController controller, ActionData actionData)

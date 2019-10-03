@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcb32d8d2e7fdc34280acfc3dc7cf3d2, type: 3}
   m_Name: TargetInRange
   m_EditorClassIdentifier: 
-  range: 3
+  range: 6

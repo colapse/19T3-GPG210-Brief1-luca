@@ -28,6 +28,6 @@ public class FleeAction : Action
 
     public override void OnExit(StateController controller, ActionData actionData)
     {
-        controller.inputManager.currentTarget = null;
+        //controller.inputManager.currentTarget = null;
     }
 }

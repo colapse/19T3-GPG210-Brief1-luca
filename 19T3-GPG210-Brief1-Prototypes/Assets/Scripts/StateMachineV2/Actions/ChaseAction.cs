@@ -35,7 +35,7 @@ public class ChaseAction : Action
 
     public override void OnExit(StateController controller, ActionData actionData)
     {
-        controller.inputManager.currentTarget = null;
+        //controller.inputManager.currentTarget = null;
     }
 
     private void Chase(StateController controller, ActionData actionData)
