@@ -58,8 +58,9 @@ public class WanderAction : Action
         controller.inputManager.inputTurnRight = false;
     }
 
-    public void Wander(StateController controller, ActionData actionData)
+    private void Wander(StateController controller, ActionData actionData)
     {
+        bool rotate = Convert.ToBoolean(actionData.objectData["Rotate"]);
         if (!controller.inputManager.IsGrounded())
         {
             controller.inputManager.inputForwardJump = false;
@@ -67,11 +68,16 @@ public class WanderAction : Action
         }else if (controller.inputManager.inputForwardJump)
         {
             return;
+        }else if (controller.inputManager.IsGrounded() && !rotate && !controller.inputManager.inputForwardJump && !controller.inputManager.wasGroundedLastFrame)
+        {
+            actionData.objectData["StartRotation"] = controller.transform.rotation.eulerAngles.y;
+            actionData.objectData["Rotate"] = true;
         }
 
         
-        bool rotate = Convert.ToBoolean(actionData.objectData["Rotate"]);
         float rotatedAmount = Mathf.Abs(Convert.ToSingle(actionData.objectData["StartRotation"]) - controller.transform.rotation.eulerAngles.y) % 360;
+        
+        
         
         if(rotate){
             // Done rotating, wait for a bit until jump
@@ -91,13 +97,11 @@ public class WanderAction : Action
         {
             actionData.objectData["WaitForSeconds"] = Convert.ToSingle(actionData.objectData["WaitForSeconds"]) - Time.deltaTime;
             return;
-        }
-        else
+        }else if (Mathf.Abs(controller.GetComponent<Rigidbody>().velocity.x) < 0.1 && Mathf.Abs(controller.GetComponent<Rigidbody>().velocity.z) < 0.1)
         {
             controller.inputManager.inputForwardJump = true;
             
-            actionData.objectData["StartRotation"] = controller.transform.rotation.eulerAngles.y;
-            actionData.objectData["Rotate"] = true;
+            
         }
             
     }

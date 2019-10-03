@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Helper;
 using UnityEditor.Animations;
 using UnityEngine;
+using UnityEngine.Assertions.Comparers;
 using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
@@ -87,14 +89,14 @@ public class Slime : MonoBehaviour
         if (Volume >= minSlimeVolume * 2)
         {
             Renderer slimeRenderer = GetComponent<Renderer>();
-            Vector3 newSlimeSpawnPos = transform.position + transform.forward.normalized * (slimeRenderer.bounds.extents.z);
+            Vector3 newSlimeSpawnPos = transform.position + transform.forward.normalized * (slimeRenderer.bounds.extents.z + 1);
             
             GameObject newSlimeObj = Instantiate(gameObject,newSlimeSpawnPos,transform.rotation);
             Slime newSlime = newSlimeObj.GetComponent<Slime>();
             newSlime.Volume = Volume / 2;
             Volume /= 2;
 
-            if (requiredForce != Vector3.zero)
+            if (requiredForce != Vector3.zero && !MathHelper.Vector3ContainsNaN(requiredForce))
             {
                 newSlime.rb.AddForce(requiredForce, ForceMode.Impulse);
             }

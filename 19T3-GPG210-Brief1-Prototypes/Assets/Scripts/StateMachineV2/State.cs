@@ -61,7 +61,15 @@ public class State : ScriptableObject
         foreach (Transition transition in transitions)
         {
             bool decisionSucceeded = transition.decision.Decide(controller);
-            controller.TransitionToState((decisionSucceeded ? transition.trueState : transition.falseState), (decisionSucceeded ? transition.trueTransitionTime : transition.falseTransitionTime));
+            State transitionTo = (decisionSucceeded ? transition.trueState : transition.falseState);
+            float transitionTime = (decisionSucceeded
+                ? transition.trueTransitionTime
+                : transition.falseTransitionTime);
+            controller.TransitionToState(transitionTo,transitionTime);
+
+            // Break if a transition occurs - Make sure that not multiple transitions occur in the same frame
+            if (transitionTo != controller.remainStateID)
+                break;
         }
     }
 }

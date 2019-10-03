@@ -36,6 +36,9 @@ public class PickEnemyAction : Action
 
         foreach (var enemy in controller.inputManager.enemiesInSight)
         {
+            if (enemy == null)
+                continue;
+            
             var enemyDistance = Vector3.Distance(enemy.transform.position, me.transform.position);
             if (target == null)
             {

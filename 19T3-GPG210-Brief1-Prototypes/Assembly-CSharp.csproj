@@ -59,6 +59,7 @@
      <Compile Include="Assets\Scripts\Camera\PlayerCamera.cs" />
      <Compile Include="Assets\Scripts\Door.cs" />
      <Compile Include="Assets\Scripts\EnemyScanner.cs" />
+     <Compile Include="Assets\Scripts\Helper\MathHelper.cs" />
      <Compile Include="Assets\Scripts\Helper\SerializeableDictionary\SerializableDictionary.cs" />
      <Compile Include="Assets\Scripts\Helper\SerializeableDictionary\SerializableDictionaryPropertyDrawer.cs" />
      <Compile Include="Assets\Scripts\Helper\SerializeableDictionary\SerializableHashSet.cs" />

@@ -59,14 +59,13 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateForwardJump.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/FleeAction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SlimeInputManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Helper/MathHelper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerInputManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PressurePlate.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/StateScaler.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/StateRandomPush.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateJump.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateIdle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateFeed.cs" />
@@ -94,8 +93,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/WanderAction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyScanner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/EnemyDetectedDecision.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SlimeInputManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/PickEnemyAction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Decisions/EnemyStrongerDecision.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Decisions/EnemyWeakerDecision.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Decisions/EnemyDetectedDecision.cs" />
@@ -106,16 +103,20 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Decision.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Decisions/TargetTooFarAway.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/TargetInRangeAction.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/State.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/JumpAttackAction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/GetUprightAction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateForwardJump.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Decisions/TargetInRange.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Decisions/TargetTwiceSmallerDecision.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/ChaseAction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/FleeAction.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Slime.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/SplitAttackAction.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/State.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Helper/MathHelper.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slime.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/PickEnemyAction.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/WanderAction.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SlimeInputManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/ChaseAction.cs" />
       </list>
     </option>
   </component>
@@ -126,7 +127,7 @@
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -178,6 +179,7 @@
       <workItem from="1569928092793" duration="2760000" />
       <workItem from="1569972792186" duration="12100000" />
       <workItem from="1570056902288" duration="3469000" />
+      <workItem from="1570075898606" duration="9736000" />
     </task>
     <servers />
   </component>
@@ -209,19 +211,6 @@
           <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="1" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/ChaseAction.cs</url>
-          <line>43</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/ChaseAction.cs" initialLine="43">
-            <startOffsets>
-              <option value="-1" />
-            </startOffsets>
-            <endOffsets>
-              <option value="-1" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

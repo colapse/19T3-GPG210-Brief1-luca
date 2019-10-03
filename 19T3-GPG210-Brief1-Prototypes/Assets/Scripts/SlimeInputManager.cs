@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.PlayerLoop;
 
 public class SlimeInputManager : MonoBehaviour
 {
@@ -15,9 +16,24 @@ public class SlimeInputManager : MonoBehaviour
     public List<Slime> enemiesInSight;
     public Slime currentTarget;
 
+    public bool wasGroundedLastFrame = false; // Hack. shouldnt be in here
+
     private void Start()
     {
         enemiesInSight = new List<Slime>();
+    }
+    
+
+    private void Update()
+    {
+        
+    }
+
+    private void LateUpdate()
+    {
+        // TODO HACK (The player inputmanager is on the camera... ==> IsGroundedCheck throws errors & would make no sense)
+        if(!gameObject.CompareTag("MainCamera"))
+            wasGroundedLastFrame = IsGrounded();
     }
 
     // HACK. Shouldnt be in here

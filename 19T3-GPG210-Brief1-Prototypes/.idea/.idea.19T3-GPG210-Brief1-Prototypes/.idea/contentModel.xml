@@ -14,6 +14,7 @@
           <e p="Door.cs" t="Include" />
           <e p="EnemyScanner.cs" t="Include" />
           <e p="Helper" t="Include">
+            <e p="MathHelper.cs" t="Include" />
             <e p="SerializeableDictionary" t="Include">
               <e p="SerializableDictionary.cs" t="Include" />
               <e p="SerializableDictionaryPropertyDrawer.cs" t="Include" />
