@@ -50,7 +50,7 @@ namespace StateMachineV1
         
             if (IsGrounded() && rb.velocity.y < 0 && jumped)
             {
-                GetComponent<StateManager>()?.ChangeState(nextState);
+                owner.ChangeState(nextState);
             }
         }
 

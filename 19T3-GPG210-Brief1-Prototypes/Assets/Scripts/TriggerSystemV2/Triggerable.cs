@@ -10,7 +10,7 @@ namespace TriggerSystemV2
     public class Triggerable : SerializedMonoBehaviour 
     {
         public delegate void TriggerableEventDel(Triggerable triggerable, bool isTriggered);
-        [HideInInspector]
+        [OdinSerialize]
         public TriggerableEventDel onStatusChanged;
         private void NotifyValueChanged(bool isTriggered)
         {
@@ -56,13 +56,15 @@ namespace TriggerSystemV2
             
             bool newStatus = IsTriggered();
 
-            if (currentStatus != newStatus)
+            
+            
+            if(!currentStatus.Equals(newStatus))
             {
                 NotifyValueChanged(newStatus);
             }
         }
 
-        public virtual bool IsTriggered()
+        public bool IsTriggered()
         {
             return allReqMustBeMet ? !triggerReqStatus.Values.Contains(false) : triggerReqStatus.Values.Contains(true);
         }

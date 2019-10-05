@@ -14,7 +14,6 @@ public class Slime : MonoBehaviour
     public static int maxSlimeVolume = 5;
     public static GameObject enemySlimePrefab; // TODO, maybe outsource to a object pool; Bad location Hacky.
 
-    public float initialAngle; // TODO? Split force claculation
     public float splitForceMultiplier = 300;
     public bool freeFeed = false;
     
@@ -121,7 +120,7 @@ public class Slime : MonoBehaviour
     }
 
     // https://forum.unity.com/threads/how-to-calculate-force-needed-to-jump-towards-target-point.372288/
-    public Vector3 CalculateSplitForceNeeded(Vector3 targetPosition)
+    public Vector3 CalculateSplitForceNeeded(Vector3 targetPosition, float initialAngle = 0)
     {
         
         float gravity = Physics.gravity.magnitude;

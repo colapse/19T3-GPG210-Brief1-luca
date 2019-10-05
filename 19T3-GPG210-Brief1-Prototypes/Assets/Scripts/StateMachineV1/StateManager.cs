@@ -84,13 +84,13 @@ namespace StateMachineV1
             if (currentState != null)
                 currentState.Exit();
 
+            currentState = newState;
             if (newState != null)
             {
                 newState.owner = this; // Hacky & unnecessary to set on each time.
                 newState.Enter();
             }
 
-            currentState = newState;
         }
     }
 }

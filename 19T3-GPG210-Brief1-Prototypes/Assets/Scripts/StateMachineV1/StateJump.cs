@@ -4,48 +4,102 @@ namespace StateMachineV1
 {
     public class StateJump : StateBase
     {
+        public float jumpForceMultiplier = 100;
+        public float rotationSpeed = 5;
+        
         Rigidbody rb;
         float distanceToGround = 0;
+        private bool forwardPushDone = false; // HACK
+        private bool jumpForceAdded = false; // HACK
+        private bool getUpright = false;
+        private bool liftedOff = false;
+        private Collider collider;
 
         private void Start()
         {
             rb = GetComponent<Rigidbody>();
-            distanceToGround = GetComponent<Collider>().bounds.extents.y;
+            collider = GetComponent<Collider>();
         }
 
         public override void Enter()
         {
             if (rb == null)
                 return;
-
-
-            rb.AddForce(rb.mass * 300 * Vector3.up);
-
+            jumpForceAdded = false;
+            forwardPushDone = false;
+            getUpright = false;
+            liftedOff = false;
+            
+            distanceToGround = collider.bounds.extents.y;
         }
 
         public override void Exit()
         {
-        
         }
 
         public override void Execute()
         {
-            if (transform.rotation.eulerAngles.x < -45 || transform.rotation.eulerAngles.x > 45 || transform.rotation.eulerAngles.z < -45 ||
-                transform.rotation.eulerAngles.z > 45)
-            {
-                if(IsGrounded())
-                     rb.AddForce(rb.mass * 0.1f * Vector3.up);
             
-                Quaternion targetRotation = Quaternion.identity;
+            if (!IsGrounded() && !liftedOff)
+            {
+                liftedOff = true;
+            }
+            
+            if (!getUpright && IsGrounded() && !SlimeInputManager.IsUpright(transform,30))
+            {
+                getUpright = true;
+                if (!jumpForceAdded)
+                {
+                    Vector3 force = rb.mass * jumpForceMultiplier * Vector3.up;
+                    rb.AddForce(force);
+                    jumpForceAdded = true;
+                }
+
+                return;
+            }
+            
+            // Make slime upright if its not (Move upright if angle is >30° while grounded, if not grounded execute until angle is less than 5°
+            if (getUpright && !IsGrounded() && !SlimeInputManager.IsUpright(transform,10)/*(transform.rotation.eulerAngles.x < -20 || transform.rotation.eulerAngles.x > 20 || transform.rotation.eulerAngles.z < -20 ||
+                transform.rotation.eulerAngles.z > 20)*/)
+            {
+                Quaternion targetRot = Quaternion.FromToRotation(transform.up, Vector3.up) * transform.rotation;
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, Time.deltaTime * rotationSpeed);
+                
+                /*
+                if(IsGrounded())
+                     rb.AddForce(rb.mass * 0.1f * Vector3.up);*/
+            
+                ////Quaternion targetRotation = Quaternion.Euler(0, transform.rotation.y,0);//Quaternion.identity;
                 //targetRotation.y = transform.localRotation.y;
             
                 //transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, 500f);
-                transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, 100f * Time.deltaTime);
+                ////transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, 180f * Time.deltaTime);
+                return;
             }
-        
-            if (IsGrounded() && rb.velocity.y < 0)
+
+            //HACK Forwardpush while jumping; Input Hack
+            if (jumpForceAdded && !IsGrounded() && Input.GetKey(KeyCode.LeftShift) && !forwardPushDone)
             {
-                GetComponent<StateManager>()?.ChangeState(nextState);
+                Slime slime = GetComponent<Slime>();
+                Vector3 forwardForce = (slime.rb.mass) * 100 * transform.forward;
+                forwardForce.y = 0;
+                rb.AddForce(forwardForce);
+                forwardPushDone = true;
+            }
+            
+            if (IsGrounded() && !jumpForceAdded && rb.velocity.y <= 0)
+            {
+                Vector3 force = rb.mass * jumpForceMultiplier * Vector3.up;
+                
+                rb.AddForce(force);
+                jumpForceAdded = true;
+            }
+            
+            
+        
+            if (jumpForceAdded && liftedOff && (IsGrounded() && (rb.velocity.y <= 0 && rb.velocity.y > -.9)))
+            {
+                owner.ChangeState(nextState);
             }
         }
 

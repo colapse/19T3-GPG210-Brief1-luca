@@ -56,23 +56,19 @@ public class ChaseAction : Action
         {
             return;
         }
-        //Debug.Log("Chasing...");
-        // TODO Chase functionality
+        
         if (controller.inputManager.IsGrounded())
         {
+            Vector3 myDir = controller.transform.forward;
+            myDir.y = 0;
             Vector3 targetDirection =
                 (controller.inputManager.currentTarget.transform.position-controller.transform.position);
-            Quaternion myRotation = Quaternion.LookRotation(controller.transform.forward);
-            Quaternion targetRotation = Quaternion.LookRotation(targetDirection, controller.transform.up); //  Quaternion.FromToRotation(controller.transform.forward, targetDirection);
+            targetDirection.y = 0;
             
             // Calculate the angle between self.forward & the direction towards the target
-            float angle = Quaternion.Angle(/*myRotation*/controller.transform.rotation,targetRotation);
-            
-//            Debug.Log("Angle to player: "+ angle + "  "+controller.transform.rotation + "    "+targetRotation);
-            //Debug.DrawRay(controller.transform.position,controller.transform.forward * 50, Color.red);
-            //Debug.DrawRay(controller.transform.position,targetDirection, Color.blue);
-            
-            if (angle > 12) // TODO HACK: make 12 to a variable
+            float angle = Vector3.Angle(myDir.normalized, targetDirection.normalized);//Quaternion.Angle(/*myRotation*/controller.transform.rotation,targetRotation);
+
+            if (angle > 5) // TODO HACK: make 5 to a variable
             {
                 // Check if target is on the left or right side
                 int side = MathHelper.AngleDir(controller.transform.forward, targetDirection, controller.transform.up);

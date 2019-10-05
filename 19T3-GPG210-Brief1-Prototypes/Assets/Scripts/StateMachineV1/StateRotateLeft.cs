@@ -16,6 +16,8 @@ namespace StateMachineV1
 
         public override void Execute()
         {
+            if (!SlimeInputManager.IsUpright(transform))
+                return;
             transform.Rotate(Vector3.up,-rotationSpeed * Time.deltaTime);
         
             if(/*Input.GetKeyUp(KeyCode.LeftArrow)*/ !owner.slimeInputManager.inputTurnLeft)

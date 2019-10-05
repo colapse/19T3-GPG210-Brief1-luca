@@ -60,6 +60,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Decisions/EnemyWeakerDecision.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Decisions/EnemyStrongerDecision.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateForwardJump.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateFeed.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/FleeAction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TriggerSystemV2/Triggerable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SlimeInputManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -70,21 +71,15 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/ChaseAction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/StateData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateBase.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateFeed.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateIdle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateRandomPush.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateScaler.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/ActionData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/SlimeNotUprightDecision.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/GetUprightAction.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateJump.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/StateController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateRotateLeft.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateRotateRight.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/WanderAction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyScanner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/EnemyDetectedDecision.cs" />
@@ -97,9 +92,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Decision.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Decisions/TargetTooFarAway.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/TargetInRangeAction.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/JumpAttackAction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/GetUprightAction.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Decisions/TargetInRange.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Decisions/TargetTwiceSmallerDecision.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/FleeAction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/SplitAttackAction.cs" />
@@ -107,20 +100,28 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Helper/MathHelper.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/PickEnemyAction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/WanderAction.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SlimeInputManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/ChaseAction.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SlimeManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Slime.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateForwardJump.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TestClass.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Door.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TriggerSystemV2/FloatRangeRequirement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TriggerSystemV2/IntTriggerRequirement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TriggerSystemV2/Trigger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TriggerSystemV2/PressurePlateTrigger.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TriggerSystemV2/DoorV2.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerInputManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateForwardJump.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateFeed.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TriggerSystemV2/TriggerRequirement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TriggerSystemV2/Triggerable.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/TriggerSystemV2/DoorV2.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SlimeManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SlimeInputManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateJump.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateRotateLeft.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV1/StateRotateRight.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Decisions/TargetInRange.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/ChaseAction.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slime.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachineV2/Actions/JumpAttackAction.cs" />
       </list>
     </option>
   </component>
@@ -185,6 +186,8 @@
       <workItem from="1570056902288" duration="3469000" />
       <workItem from="1570075898606" duration="15296000" />
       <workItem from="1570103941887" duration="16075000" />
+      <workItem from="1570150480475" duration="7614000" />
+      <workItem from="1570238170326" duration="13324000" />
     </task>
     <servers />
   </component>

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace StateMachineV1
 {
@@ -7,6 +8,7 @@ namespace StateMachineV1
         public Transform feedExhaust;
         public GameObject slimeFeedPrefab;
 
+        [FormerlySerializedAs("horizontalFeedForce")] public float feedForce = 100;
         private void Start()
         {
         }
@@ -21,8 +23,8 @@ namespace StateMachineV1
             GameObject feedObj = Instantiate(slimeFeedPrefab, feedExhaust.position, Quaternion.identity);
             Slime feedSlime = feedObj.GetComponent<Slime>();
             feedSlime.Volume = 0.2f;
-            Vector3 feedForce = transform.forward * 500;
-            feedForce.y = 30;
+            Vector3 feedForce = transform.forward * this.feedForce;
+            feedForce.y = this.feedForce/3;
             feedObj.GetComponent<Rigidbody>()?.AddForce(feedForce);
 
             slime.Volume -= 0.2f;

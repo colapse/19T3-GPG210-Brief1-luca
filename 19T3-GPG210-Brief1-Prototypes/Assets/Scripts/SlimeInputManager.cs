@@ -44,11 +44,11 @@ public class SlimeInputManager : MonoBehaviour
     }
 
     // HACK. SHOULDNT BE IN THERE
-    public static bool IsUpright(Transform obj)
+    public static bool IsUpright(Transform obj, float angle = 30f)
     {
-        return !(obj.rotation.eulerAngles.x < -60 ||
-                 (obj.rotation.eulerAngles.x > 60 && obj.rotation.eulerAngles.x < 300) ||
-                obj.rotation.eulerAngles.z < -60 ||
-                 (obj.rotation.eulerAngles.z > 60 && obj.rotation.eulerAngles.z < 300));
+        return !(obj.rotation.eulerAngles.x < -angle ||
+                 (obj.rotation.eulerAngles.x > angle && obj.rotation.eulerAngles.x < 360-angle) ||
+                 obj.rotation.eulerAngles.z < -angle ||
+                 (obj.rotation.eulerAngles.z > angle && obj.rotation.eulerAngles.z < 360-angle));
     }
 }

@@ -77,7 +77,7 @@ public class SlimeManager : MonoBehaviour
 
     void SplitSlime(Slime slime)
     {
-        if (slime.Volume >= slimeMinVolume * 2 && slimePrefab)
+        if (slime != null && slime.Volume >= slimeMinVolume * 2 && slimePrefab)
         {
             Renderer slimeRenderer = slime.GetComponent<Renderer>();
             Vector3 newSlimeSpawnPos = slime.transform.position + slime.transform.forward.normalized * (slimeRenderer.bounds.extents.z);

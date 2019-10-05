@@ -16,14 +16,17 @@ public class PlayerInputManager : SlimeInputManager
     void Update()
     {
         // Reset Some Vars
-        inputJump = false;
+        //inputJump = false;
         
         // Capture Input
         
         // Input Jump
-        if (Input.GetKeyUp(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             inputJump = true;
+        }else if(Input.GetKeyUp(KeyCode.Space))
+        {
+            inputJump = false;
         }
 
         // Input Forward Jump / Hop
