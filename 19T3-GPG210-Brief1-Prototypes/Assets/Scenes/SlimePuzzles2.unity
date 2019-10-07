@@ -675,9 +675,17 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_IsSelectable: 1
-  m_SelectedFaces: 
-  m_SelectedEdges: []
-  m_SelectedVertices: 
+  m_SelectedFaces: 01000000
+  m_SelectedEdges:
+  - a: 4
+    b: 5
+  - a: 6
+    b: 4
+  - a: 5
+    b: 7
+  - a: 7
+    b: 6
+  m_SelectedVertices: 04000000050000000600000007000000
 --- !u!23 &80419275
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2296,9 +2304,6 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
-    - Name: onStatusChanged
-      Entry: 6
-      Data: 
     - Name: triggerRequirements
       Entry: 7
       Data: 0|System.Collections.Generic.List`1[[TriggerSystemV2.TriggerRequirement,
@@ -2354,6 +2359,22 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+  statusChangedEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 288192683}
+        m_MethodName: HandleTriggerableStatusChanged
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: TriggerSystemV2.TriggerableEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   allReqMustBeMet: 1
 --- !u!64 &288192685
 MeshCollider:
@@ -2823,49 +2844,49 @@ MonoBehaviour:
   m_Positions:
   - {x: 0, y: 0, z: 1.9786663}
   - {x: 1, y: 0, z: 1.9786663}
-  - {x: 0.00000056401905, y: 15.332598, z: 1.9786668}
-  - {x: 1.0000007, y: 15.332598, z: 1.9786669}
+  - {x: 0.0000015176935, y: 10.428854, z: 1.9786668}
+  - {x: 1.0000017, y: 10.428854, z: 1.9786669}
   - {x: 1, y: 0, z: 1.9786663}
   - {x: 1.0000004, y: 0, z: -2.912138}
-  - {x: 1.0000007, y: 15.332598, z: 1.9786669}
-  - {x: 1.0000013, y: 15.332598, z: -2.912138}
+  - {x: 1.0000017, y: 10.428854, z: 1.9786669}
+  - {x: 1.0000023, y: 10.428854, z: -2.912138}
   - {x: 1.0000004, y: 0, z: -2.912138}
   - {x: 0.00000019337392, y: 0, z: -2.9121382}
-  - {x: 1.0000013, y: 15.332598, z: -2.912138}
-  - {x: 0.0000011470481, y: 15.332598, z: -2.9121363}
+  - {x: 1.0000023, y: 10.428854, z: -2.912138}
+  - {x: 0.0000021007222, y: 10.428854, z: -2.9121344}
   - {x: 0.00000019337392, y: 0, z: -2.9121382}
   - {x: 0, y: 0, z: 1.9786663}
-  - {x: 0.0000011470481, y: 15.332598, z: -2.9121363}
-  - {x: 0.00000056401905, y: 15.332598, z: 1.9786668}
-  - {x: 0.00000056401905, y: 15.332598, z: 1.9786668}
-  - {x: 1.0000007, y: 15.332598, z: 1.9786669}
-  - {x: 0.0000011470481, y: 15.332598, z: -2.9121363}
-  - {x: 1.0000013, y: 15.332598, z: -2.912138}
+  - {x: 0.0000021007222, y: 10.428854, z: -2.9121344}
+  - {x: 0.0000015176935, y: 10.428854, z: 1.9786668}
+  - {x: 0.0000015176935, y: 10.428854, z: 1.9786668}
+  - {x: 1.0000017, y: 10.428854, z: 1.9786669}
+  - {x: 0.0000021007222, y: 10.428854, z: -2.9121344}
+  - {x: 1.0000023, y: 10.428854, z: -2.912138}
   - {x: 0.00000019337392, y: 0, z: -2.9121382}
   - {x: 1.0000004, y: 0, z: -2.912138}
   - {x: 0, y: 0, z: 1.9786663}
   - {x: 1, y: 0, z: 1.9786663}
   m_Textures0:
-  - {x: 0, y: 0.000000061535665}
-  - {x: -1, y: 0.000000061535665}
-  - {x: -0.00000056401905, y: 15.332598}
-  - {x: -1.0000007, y: 15.332598}
-  - {x: 1.9786662, y: 0.000000046649365}
-  - {x: -2.912138, y: 0.000000046649365}
-  - {x: 1.9786668, y: 15.332598}
-  - {x: -2.912138, y: 15.332598}
-  - {x: 0.99999964, y: 4.3185345e-14}
-  - {x: -0.0000005009339, y: 4.3185345e-14}
-  - {x: 1.0000006, y: 15.332598}
-  - {x: 0.0000004527408, y: 15.332598}
-  - {x: 2.9121382, y: 4.8660264e-15}
-  - {x: -1.9786663, y: 4.8660273e-15}
-  - {x: 2.9121363, y: 15.332598}
-  - {x: -1.9786668, y: 15.332598}
-  - {x: 0.00000056401905, y: 1.9786668}
-  - {x: 1.0000007, y: 1.9786669}
-  - {x: 0.0000011470481, y: -2.9121363}
-  - {x: 1.0000013, y: -2.912138}
+  - {x: 0, y: 0.0000000904703}
+  - {x: -1, y: 0.0000000904703}
+  - {x: -0.0000015176935, y: 10.428854}
+  - {x: -1.0000017, y: 10.428854}
+  - {x: 1.9786662, y: 0.00000016003007}
+  - {x: -2.912138, y: 0.00000016003007}
+  - {x: 1.9786668, y: 10.428854}
+  - {x: -2.912138, y: 10.428854}
+  - {x: 0.99999964, y: 1.2698298e-13}
+  - {x: -0.0000005009339, y: 1.2698298e-13}
+  - {x: 1.0000015, y: 10.428854}
+  - {x: 0.0000014064153, y: 10.428854}
+  - {x: 2.9121382, y: 1.4308155e-14}
+  - {x: -1.9786663, y: 1.4308153e-14}
+  - {x: 2.9121344, y: 10.428854}
+  - {x: -1.9786668, y: 10.428854}
+  - {x: 0.0000015176935, y: 1.9786668}
+  - {x: 1.0000017, y: 1.9786669}
+  - {x: 0.0000021007222, y: -2.9121344}
+  - {x: 1.0000023, y: -2.912138}
   - {x: -0.00000019337392, y: -2.9121382}
   - {x: -1.0000004, y: -2.912138}
   - {x: 0, y: 1.9786663}
@@ -2874,21 +2895,21 @@ MonoBehaviour:
   m_Textures3: []
   m_Tangents:
   - {x: -1, y: 0, z: 0, w: -1}
-  - {x: -1, y: 1.2429883e-22, z: -0.000000059604634, w: -1}
-  - {x: -1, y: 1.2429883e-22, z: -0.000000059604634, w: -1}
+  - {x: -1, y: 0, z: -0.000000059604634, w: -1}
+  - {x: -1, y: 0, z: -0.000000059604634, w: -1}
   - {x: -1, y: 0, z: -0.00000011920927, w: -1}
-  - {x: -0.000000073122514, y: 3.3146363e-22, z: 1, w: -1}
-  - {x: -0.00000009749668, y: 7.734151e-22, z: 1, w: -1}
-  - {x: -0.00000009749668, y: 7.734151e-22, z: 1, w: -1}
-  - {x: -0.00000012187084, y: 8.839029e-22, z: 1, w: -1}
+  - {x: -0.00000007312251, y: 0, z: 1, w: -1}
+  - {x: -0.000000097496674, y: 0, z: 1, w: -1}
+  - {x: -0.000000097496674, y: 0, z: 1, w: -1}
+  - {x: -0.00000012187084, y: 0, z: 1, w: -1}
   - {x: 1, y: 0, z: 0.00000023841855, w: -1}
-  - {x: 1, y: 0, z: -0.0000007152556, w: -1}
-  - {x: 1, y: 0, z: -0.0000007152556, w: -1}
-  - {x: 1, y: 0, z: -0.0000016689298, w: -1}
-  - {x: 0.000000039538268, y: -4.7786833e-23, z: -1, w: -1}
-  - {x: 0.00000007937377, y: 4.3825896e-22, z: -1, w: -1}
-  - {x: 0.00000007937377, y: 4.3825896e-22, z: -1, w: -1}
-  - {x: 0.000000119209275, y: 2.6137754e-22, z: -1, w: -1}
+  - {x: 1, y: 2.079239e-20, z: -0.0000016689299, w: -1}
+  - {x: 1, y: 2.079239e-20, z: -0.0000016689299, w: -1}
+  - {x: 1, y: 8.316957e-20, z: -0.0000035762785, w: -1}
+  - {x: 0.000000039538264, y: 3.0338326e-22, z: -1, w: -1}
+  - {x: 0.00000007937376, y: -1.7318888e-22, z: -1, w: -1}
+  - {x: 0.00000007937376, y: -1.7318888e-22, z: -1, w: -1}
+  - {x: 0.00000011920926, y: -1.0340409e-21, z: -1, w: -1}
   - {x: 1, y: 0, z: 0, w: -1}
   - {x: 1, y: 0, z: 0, w: -1}
   - {x: 1, y: 0, z: 0, w: -1}
@@ -2906,17 +2927,9 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_IsSelectable: 1
-  m_SelectedFaces: 04000000
-  m_SelectedEdges:
-  - a: 16
-    b: 17
-  - a: 18
-    b: 16
-  - a: 17
-    b: 19
-  - a: 19
-    b: 18
-  m_SelectedVertices: 10000000110000001200000013000000
+  m_SelectedFaces: 
+  m_SelectedEdges: []
+  m_SelectedVertices: 
 --- !u!23 &403997198
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2977,6 +2990,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1 &481329521 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5543786642039710463, guid: a5e0b8a45aa356f44a70bea66a791c33,
+    type: 3}
+  m_PrefabInstance: {fileID: 1044991537}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &481329522
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 481329521}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0000001, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &532615971
 GameObject:
   m_ObjectHideFlags: 0
@@ -5232,7 +5264,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh14130
+  m_Name: pb_Mesh14124
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5243,8 +5275,8 @@ Mesh:
     firstVertex: 0
     vertexCount: 24
     localAABB:
-      m_Center: {x: 0.50000066, y: 7.666299, z: -0.46673566}
-      m_Extent: {x: 0.50000066, y: 7.666299, z: 2.4454026}
+      m_Center: {x: 0.50000113, y: 5.214427, z: -0.46673566}
+      m_Extent: {x: 0.50000113, y: 5.214427, z: 2.4454026}
   m_Shapes:
     vertices: []
     shapes: []
@@ -5323,7 +5355,7 @@ Mesh:
       format: 0
       dimension: 0
     m_DataSize: 1152
-    _typelessdata: 0000000000000000f044fd3f00000000569205b30000803f000080bf0000000000000000000080bf00000000972584330000803f00000000f044fd3ffdff7fb3a04416b30000803f000080bfa044161bfdff7fb3000080bf000080bf972584331867173552527541f444fd3ffdff7fb3a04416b30000803f000080bfa044161bfdff7fb3000080bf186717b5525275410600803f52527541f544fd3ffdffffb3eaf626b30000803f000080bf00000000fdffffb3000080bf060080bf525275410000803f00000000f044fd3f0000803f835b48b387079d3387079db3835bc81b0000803f000080bfef44fd3f855b48330300803f0000000078603ac00000803f18c069b35e5fd1335e5fd1b318c0691c0000803f000080bf78603ac0855b48330600803f52527541f544fd3f0000803f18c069b35e5fd1335e5fd1b318c0691c0000803f000080bff444fd3f525275410b00803f5252754178603ac00000803f569285b39adb02349adb02b45692851c0000803f000080bf78603ac0525275410300803f0000000078603ac0feff7f34559285a8000080bf0000803f00000000feff7f34000080bffaff7f3f507d422938a24f340000000079603ac0feff3fb55c928533000080bf0000803f00000000feff3fb5000080bfea7706b5507d42290b00803f5252754178603ac0feff3fb55c928533000080bf0000803f00000000feff3fb5000080bf0500803f5252754146f499355252754171603ac0feffdfb55d920534000080bf0000803f00000000feffdfb5000080bf3910f3345252754138a24f340000000079603ac0000080bf56928533c9d029b3c9d029333c15679a000080bf000080bf79603a402c51af270000000000000000f044fd3f000080bf729154333174aab33174aa33a574041c000080bf000080bff044fdbf2e51af2746f499355252754171603ac0000080bf729154333174aab33174aa33a574041c000080bf000080bf71603a40525275411867173552527541f444fd3f000080bf37fe1d33feffffb3feffff3337fe9d1b000080bf000080bff444fdbf525275411867173552527541f444fd3f000000000000803f000000000000803f0000000000000000000080bf18671735f444fd3f0600803f52527541f544fd3f000000000000803f000000000000803f0000000000000000000080bf0600803ff544fd3f46f499355252754171603ac0000000000000803f000000000000803f0000000000000000000080bf46f4993571603ac00b00803f5252754178603ac0000000000000803f000000000000803f0000000000000000000080bf0b00803f78603ac038a24f340000000079603ac000000000000080bf00000000000080bf0000000000000000000080bf38a24fb479603ac00300803f0000000078603ac000000000000080bf00000000000080bf0000000000000000000080bf030080bf78603ac00000000000000000f044fd3f00000000000080bf00000000000080bf0000000000000000000080bf00000000f044fd3f0000803f00000000f044fd3f00000000000080bf00000000000080bf0000000000000000000080bf000080bff044fd3f
+    _typelessdata: 0000000000000000f044fd3f00000000d46044b30000803f000080bf0000000000000000000080bf000000009348c2330000803f00000000f044fd3ffdff7fb3ecec5cb30000803f000080bf00000000fdff7fb3000080bf000080bf9348c2338db3cb3596dc2641f444fd3ffdff7fb3ecec5cb30000803f000080bf00000000fdff7fb3000080bf8db3cbb596dc26410e00803f96dc2641f544fd3ffdffffb3037975b30000803f000080bf00000000fdffffb3000080bf0e0080bf96dc26410000803f00000000f044fd3f0000803fb9d42bb486079d3386079db3000000000000803f000080bfef44fd3fbbd42b340300803f0000000078603ac00000803fc61a38b45d5fd1335d5fd1b3000000000000803f000080bf78603ac0bbd42b340e00803f96dc2641f544fd3f0000803fc61a38b45d5fd1335d5fd1b3000000000000803f000080bff444fd3f96dc26411300803f96dc264178603ac00000803fd46044b49adb02349adb02b4000000000000803f000080bf78603ac096dc26410300803f0000000078603ac0feff7f34d36044a9000080bf0000803f00000000feff7f34000080bffaff7f3f5af80e2a38a24f340000000079603ac0ffffdfb5ea604434000080bf0000803fea60c41effffdfb5000080bfea7706b55af80e2a1300803f96dc264178603ac0ffffdfb5ea604434000080bf0000803fea60c41effffdfb5000080bf0d00803f96dc264122fa0c3696dc264169603ac0ffff6fb6ec60c434000080bf0000803fec60c41fffff6fb6000080bf10c4bc3596dc264138a24f340000000079603ac0000080bfd3604434c8d029b3c8d029334962b71b000080bf000080bf79603a405ce080280000000000000000f044fd3f000080bfac5130343074aab33074aa335d5f519b000080bf000080bff044fdbf5be0802822fa0c3696dc264169603ac0000080bfac5130343074aab33074aa335d5f519b000080bf000080bf69603a4096dc26418db3cb3596dc2641f444fd3f000080bf85421c34fcffffb3fcffff3385429c9c000080bf000080bff444fdbf96dc26418db3cb3596dc2641f444fd3f000000000000803f000000000000803f0000000000000000000080bf8db3cb35f444fd3f0e00803f96dc2641f544fd3f000000000000803f000000000000803f0000000000000000000080bf0e00803ff544fd3f22fa0c3696dc264169603ac0000000000000803f000000000000803f0000000000000000000080bf22fa0c3669603ac01300803f96dc264178603ac0000000000000803f000000000000803f0000000000000000000080bf1300803f78603ac038a24f340000000079603ac000000000000080bf00000000000080bf0000000000000000000080bf38a24fb479603ac00300803f0000000078603ac000000000000080bf00000000000080bf0000000000000000000080bf030080bf78603ac00000000000000000f044fd3f00000000000080bf00000000000080bf0000000000000000000080bf00000000f044fd3f0000803f00000000f044fd3f00000000000080bf00000000000080bf0000000000000000000080bf000080bff044fd3f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -5377,8 +5409,8 @@ Mesh:
       m_BitSize: 0
     m_UVInfo: 0
   m_LocalAABB:
-    m_Center: {x: 0.50000066, y: 7.666299, z: -0.46673566}
-    m_Extent: {x: 0.50000066, y: 7.666299, z: 2.4454026}
+    m_Center: {x: 0.50000113, y: 5.214427, z: -0.46673566}
+    m_Extent: {x: 0.50000113, y: 5.214427, z: 2.4454026}
   m_MeshUsageFlags: 0
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
@@ -5456,6 +5488,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5543786642039710461, guid: a5e0b8a45aa356f44a70bea66a791c33,
+        type: 3}
+      propertyPath: weightCheckerInterval
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5543786642039710458, guid: a5e0b8a45aa356f44a70bea66a791c33,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5543786642039710458, guid: a5e0b8a45aa356f44a70bea66a791c33,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5e0b8a45aa356f44a70bea66a791c33, type: 3}
 --- !u!114 &1044991538 stripped
@@ -5464,7 +5511,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1044991537}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 481329521}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: afc22088c0f347029e6710608595467a, type: 3}
@@ -5485,7 +5532,7 @@ PrefabInstance:
     - target: {fileID: 5342603693628144786, guid: 886b1581e2c87034989b1b21d6d0f584,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.2
+      value: 24.36
       objectReference: {fileID: 0}
     - target: {fileID: 5342603693628144786, guid: 886b1581e2c87034989b1b21d6d0f584,
         type: 3}
@@ -5495,7 +5542,7 @@ PrefabInstance:
     - target: {fileID: 5342603693628144786, guid: 886b1581e2c87034989b1b21d6d0f584,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 20.47
+      value: 3.98
       objectReference: {fileID: 0}
     - target: {fileID: 5342603693628144786, guid: 886b1581e2c87034989b1b21d6d0f584,
         type: 3}
@@ -6132,9 +6179,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2093647958305744976, guid: 79a92ba0a4a42ce4c92e49bbe5adbec0,
         type: 3}
+      propertyPath: statusChangedEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2093647958305744976, guid: 79a92ba0a4a42ce4c92e49bbe5adbec0,
+        type: 3}
       propertyPath: serializationData.Prefab
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2093647958305744976, guid: 79a92ba0a4a42ce4c92e49bbe5adbec0,
+        type: 3}
     - target: {fileID: 2093647958305744976, guid: 79a92ba0a4a42ce4c92e49bbe5adbec0,
         type: 3}
       propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[0]
@@ -6156,6 +6209,31 @@ PrefabInstance:
         type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[2]
       value: '"path":"triggerRequirements.[0].trigger","value":$eref:0'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2093647958305744976, guid: 79a92ba0a4a42ce4c92e49bbe5adbec0,
+        type: 3}
+      propertyPath: statusChangedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2093647958305744976, guid: 79a92ba0a4a42ce4c92e49bbe5adbec0,
+        type: 3}
+      propertyPath: statusChangedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2093647958305744976, guid: 79a92ba0a4a42ce4c92e49bbe5adbec0,
+        type: 3}
+      propertyPath: statusChangedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2111491388}
+    - target: {fileID: 2093647958305744976, guid: 79a92ba0a4a42ce4c92e49bbe5adbec0,
+        type: 3}
+      propertyPath: statusChangedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HandleTriggerableStatusChanged
+      objectReference: {fileID: 0}
+    - target: {fileID: 2093647958305744976, guid: 79a92ba0a4a42ce4c92e49bbe5adbec0,
+        type: 3}
+      propertyPath: statusChangedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2093647958305744980, guid: 79a92ba0a4a42ce4c92e49bbe5adbec0,
         type: 3}
@@ -6813,9 +6891,6 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
-    - Name: onStatusChanged
-      Entry: 6
-      Data: 
     - Name: triggerRequirements
       Entry: 7
       Data: 0|System.Collections.Generic.List`1[[TriggerSystemV2.TriggerRequirement,
@@ -6850,6 +6925,22 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+  statusChangedEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1663328668}
+        m_MethodName: HandleTriggerableStatusChanged
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: TriggerSystemV2.TriggerableEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   allReqMustBeMet: 1
 --- !u!64 &1663328670
 MeshCollider:
@@ -7077,17 +7168,9 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_IsSelectable: 1
-  m_SelectedFaces: 04000000
-  m_SelectedEdges:
-  - a: 16
-    b: 17
-  - a: 18
-    b: 16
-  - a: 17
-    b: 19
-  - a: 19
-    b: 18
-  m_SelectedVertices: 10000000110000001200000013000000
+  m_SelectedFaces: 
+  m_SelectedEdges: []
+  m_SelectedVertices: 
 --- !u!23 &1663328672
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11035,14 +11118,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6925129055538611229, guid: dc957a6873e48e64f9e33bb3915e06ce,
         type: 3}
-      propertyPath: activeSlime
+      propertyPath: slimes.Array.data[0]
       value: 
       objectReference: {fileID: 1881801377}
     - target: {fileID: 6925129055538611229, guid: dc957a6873e48e64f9e33bb3915e06ce,
         type: 3}
-      propertyPath: slimes.Array.data[0]
+      propertyPath: activeSlime
       value: 
       objectReference: {fileID: 1881801377}
+    - target: {fileID: 6925129055538611230, guid: dc957a6873e48e64f9e33bb3915e06ce,
+        type: 3}
+      propertyPath: rotationSpeed
+      value: 60
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc957a6873e48e64f9e33bb3915e06ce, type: 3}
 --- !u!43 &2045606720
@@ -11371,6 +11459,18 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!114 &2111491388 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2093647958305744980, guid: 79a92ba0a4a42ce4c92e49bbe5adbec0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1509237013}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a234f9d75174084abacd8f31daa3246, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2138920997
 GameObject:
   m_ObjectHideFlags: 0
@@ -11432,9 +11532,6 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
-    - Name: onStatusChanged
-      Entry: 6
-      Data: 
     - Name: triggerRequirements
       Entry: 7
       Data: 0|System.Collections.Generic.List`1[[TriggerSystemV2.TriggerRequirement,
@@ -11469,6 +11566,22 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+  statusChangedEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2138920998}
+        m_MethodName: HandleTriggerableStatusChanged
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: TriggerSystemV2.TriggerableEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   allReqMustBeMet: 1
 --- !u!64 &2138921000
 MeshCollider:

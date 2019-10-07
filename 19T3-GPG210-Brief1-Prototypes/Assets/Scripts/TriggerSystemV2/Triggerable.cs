@@ -4,24 +4,37 @@ using System.Linq;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace TriggerSystemV2
 {
+    [System.Serializable]
+    public class TriggerableEvent : UnityEvent<Triggerable, bool>
+    {
+    }
+    
     public class Triggerable : SerializedMonoBehaviour 
     {
+        /*
         public delegate void TriggerableEventDel(Triggerable triggerable, bool isTriggered);
-        [OdinSerialize]
-        public TriggerableEventDel onStatusChanged;
+        public event TriggerableEventDel OnStatusChanged;
+        */
+        public TriggerableEvent statusChangedEvent;
         private void NotifyValueChanged(bool isTriggered)
-        {
-            if(onStatusChanged != null)
-                onStatusChanged (this, isTriggered);
+        {/*
+            if(OnStatusChanged != null)
+                OnStatusChanged (this, isTriggered);*/
+            
+            statusChangedEvent.Invoke(this,isTriggered);
         }
+
+        
         
         [NonSerialized, OdinSerialize]
         public List<TriggerRequirement> triggerRequirements;
         [SerializeField] public bool allReqMustBeMet = true;
 
+        // Stores which triggerRequirements are met & which not // Kind of hacky
         private Dictionary<TriggerRequirement, bool> triggerReqStatus;
 
         

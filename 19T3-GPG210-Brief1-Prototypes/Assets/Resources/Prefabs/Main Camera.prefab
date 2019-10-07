@@ -28,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6925129055538611225}
-  m_LocalRotation: {x: 0.6390556, y: -0, z: -0, w: 0.76916057}
+  m_LocalRotation: {x: 0.6390565, y: 0, z: 0, w: 0.76915985}
   m_LocalPosition: {x: 76.92, y: 27.7, z: 2.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -107,6 +107,16 @@ MonoBehaviour:
   enemiesInSight: []
   currentTarget: {fileID: 0}
   wasGroundedLastFrame: 0
+  inputRotateCameraLeft: 0
+  inputRotateCameraRight: 0
+  actionJump: 32
+  actionForwardJump: 119
+  actionFeed: 102
+  actionRotateLeft: 97
+  actionRotateRight: 100
+  actionRotateCamLeft: 113
+  actionRotateCamRight: 101
+  actionSplit: 13
 --- !u!114 &6925129055538611229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,7 +155,9 @@ MonoBehaviour:
   desiredDistance: 15
   currentDistance: 0
   followSpeed: 2
+  rotationSpeed: 3
   desiredHeightAboveTarget: 5
   maxHeightAboveTarget: 15
   currentHeightAboveTarget: 5
   focusTarget: {fileID: 0}
+  playerInputManager: {fileID: 0}

@@ -40,7 +40,9 @@ public class SlimeManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Q))
+        // TODO Currently only used here for the PLAYER. Do not use for AI. Delete this at some point and use Split() in Slime class (& Notify player SlimeManager via event or so)
+        // HACKY; NOT PERFORMANT
+        if (slimeInputManager is PlayerInputManager manager && Input.GetKeyUp(manager.actionSplit)) 
         {
             SplitSlime(activeSlime);
         }

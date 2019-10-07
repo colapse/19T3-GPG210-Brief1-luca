@@ -43,6 +43,15 @@ public class SlimeInputManager : MonoBehaviour
         return Physics.Raycast(transform.position, -Vector3.up, distanceToGround + 0.1f);
     }
 
+    // HACK. Shouldnt be in here
+    public static bool IsGrounded(GameObject gameObject)
+    {
+        float distanceToGround = gameObject.GetComponent<Collider>().bounds.extents.y;
+        return Physics.Raycast(gameObject.transform.position, -Vector3.up, distanceToGround + 0.1f);
+    }
+    
+    
+
     // HACK. SHOULDNT BE IN THERE
     public static bool IsUpright(Transform obj, float angle = 30f)
     {

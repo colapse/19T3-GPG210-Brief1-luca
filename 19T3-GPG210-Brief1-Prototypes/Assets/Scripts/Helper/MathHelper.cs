@@ -2,7 +2,7 @@
 
 namespace Helper
 {
-    public class MathHelper
+    public static class MathHelper
     {
         
         /** AngleDir: Determines if a target is on the left or right of an object.
@@ -25,6 +25,21 @@ namespace Helper
         public static bool Vector3ContainsNaN(Vector3 vector)
         {
             return float.IsNaN(vector.x) || float.IsNaN(vector.y) || float.IsNaN(vector.z);
+        }
+        
+        // original from https://answers.unity.com/questions/756538/mathfapproximately-with-a-threshold.html
+        public static bool FApproximately(float a, float b, float threshold = -1)
+        {
+            //return ((a - b) < 0 ? ((a - b) * -1) : (a - b)) <= threshold;
+            return threshold <= 0 ? Mathf.Approximately(a,b) : (((a < b)?(b - a):(a - b)) <= threshold);
+        }
+
+        public static bool Equals(this Vector3 v3, Vector3 other, float treshold)
+        {
+            return Vector3.SqrMagnitude(v3 - other) < treshold;
+            //const double epsilon = 0.005;
+            //Debug.Log(v3.magnitude+" "+other.magnitude+" < "+treshold);
+            //return (Mathf.Abs(v3.magnitude - other.magnitude) < treshold);
         }
     }
 }

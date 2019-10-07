@@ -27,7 +27,7 @@ namespace TriggerSystemV2
             get => trigger;
             set
             {
-                if (trigger != null && trigger.onValueChanged != null)
+                if (trigger != null)
                         trigger.onValueChanged -= HandleTriggerValueChanged;
                 
                 trigger = value;

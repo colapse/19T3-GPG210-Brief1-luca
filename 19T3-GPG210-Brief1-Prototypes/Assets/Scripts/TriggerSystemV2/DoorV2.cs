@@ -22,10 +22,10 @@ namespace TriggerSystemV2
                 triggerable = GetComponent<Triggerable>();
             }
 
-            if (triggerable != null)
+            /*if (triggerable != null)
             {
-                triggerable.onStatusChanged += HandleTriggerableStatusChanged;
-            }
+                triggerable.OnStatusChanged += HandleTriggerableStatusChanged;
+            }*/
         }
 
         private void Update()
@@ -39,7 +39,7 @@ namespace TriggerSystemV2
             }
         }
 
-        private void HandleTriggerableStatusChanged(Triggerable trig, bool isTriggered)
+        public void HandleTriggerableStatusChanged(Triggerable trig, bool isTriggered)
         {
             Debug.Log("New Triggerable Status: "+isTriggered);
             if (isTriggered)
