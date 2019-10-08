@@ -11,6 +11,7 @@ public class Jellyfier : MonoBehaviour
     public float bounceSpeed;
     public float fallForce;
     public float stiffness;
+    public float stiffness;
 
     private MeshFilter meshFilter;
     private Mesh mesh;
@@ -34,8 +35,9 @@ public class Jellyfier : MonoBehaviour
 
         GetVertices();
 
-        //bottomVertIndexes = currentMeshVertices.OrderByDescending(x => x.y).Select((v, ind) => ind).Take(12).ToArray();
-        bottomVertIndexes = currentMeshVertices.OrderBy(x => x.y).Select(v => Array.IndexOf(currentMeshVertices,v)).Take(12).ToArray();
+        //bottomVertIndexes = currentMeshVertices.OrderBy(x => x.y).Select((v, ind) => ind).Take(12).ToArray();  //V1
+        //bottomVertIndexes = currentMeshVertices.OrderBy(x => x.y).Select(v => Array.IndexOf(currentMeshVertices,v)).Take(12).ToArray(); //V2
+        bottomVertIndexes = currentMeshVertices.Select((v1,i1)=>new {v1,i1}).OrderBy(x => x.v1.y).Select((v, ind) => v.i1).Take(12).ToArray(); //V3
         bcolor = new Color32[bottomVertIndexes.Length];
         bottomVecs = new Vector3[bottomVertIndexes.Length];
 
@@ -47,7 +49,7 @@ public class Jellyfier : MonoBehaviour
         }
         
         
-        Debug.Log("No BottomVert FOund: "+bottomVertIndexes.Length);
+        Debug.Log("No. BottomVert Found: "+bottomVertIndexes.Length);
         //bottomVertIndexes =  currentMeshVertices.OrderByDescending(x => x.y).Where(); //Select((v, ind) => ind).Take(12).ToArray();
 
         /*
@@ -79,6 +81,7 @@ public class Jellyfier : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         //HACK
         for (int i = 0; i < currentMeshVertices.Length; i++)
         {
@@ -86,7 +89,7 @@ public class Jellyfier : MonoBehaviour
             {
                 bottomVecs[i] = currentMeshVertices[bottomVertIndexes[i]];
             }
-        }
+        }*/
         
         // HACK
         if (Input.GetMouseButton(0))
@@ -108,13 +111,31 @@ public class Jellyfier : MonoBehaviour
     {
         for (int i = 0; i < jellyVertices.Length; i++)
         {
-            jellyVertices[i].UpdateVelocity(bounceSpeed);
-            float finalStiffness = bottomVecs.Contains(currentMeshVertices[i]) ? 5*stiffness:stiffness;//(bottomVertIndexes.Contains(i))?5*stiffness:stiffness;
+            float finalStiffness = stiffness;
+
+            if (bottomVertIndexes.Contains(i))
+            {
+                finalStiffness = 5 * stiffness;
+            }
+            else
+            {
+                jellyVertices[i].UpdateVelocity(bounceSpeed);
+            }
+            
             jellyVertices[i].Settle(finalStiffness);
 
             jellyVertices[i].currentVertexPosition += jellyVertices[i].currentVelocity * Time.deltaTime;
             currentMeshVertices[i] = jellyVertices[i].currentVertexPosition;
         }
+        /*for (int i = 0; i < jellyVertices.Length; i++)
+        {
+            jellyVertices[i].UpdateVelocity(bounceSpeed);
+            float finalStiffness = /*bottomVecs.Contains(currentMeshVertices[i]) #1#bottomVertIndexes.Contains(i)? 5*stiffness:stiffness;//(bottomVertIndexes.Contains(i))?5*stiffness:stiffness;
+            jellyVertices[i].Settle(finalStiffness);
+
+            jellyVertices[i].currentVertexPosition += jellyVertices[i].currentVelocity * Time.deltaTime;
+            currentMeshVertices[i] = jellyVertices[i].currentVertexPosition;
+        }*/
 
         mesh.vertices = currentMeshVertices;
         mesh.RecalculateBounds();
