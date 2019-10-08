@@ -33,12 +33,15 @@ namespace SoftBody
         {
             currentVelocity *= 1f - _stiffness * Time.deltaTime;
         }
-
-        public void ApplyPressureToVertex(Transform _transform, Vector3 _position, float _pressure)
+        
+        public void ApplyPressureToVertex(Transform _transform, Vector3 _position, float _pressure, bool ignoreY = false)
         {
             Vector3 distanceVerticePoint = currentVertexPosition - _transform.InverseTransformPoint(_position);
+            if (ignoreY)
+                distanceVerticePoint.y = 0;
             float adaptedPressure = _pressure / (1f + distanceVerticePoint.sqrMagnitude);
             float velocity = adaptedPressure * Time.deltaTime;
+
             currentVelocity += distanceVerticePoint.normalized * velocity;
         }
     }

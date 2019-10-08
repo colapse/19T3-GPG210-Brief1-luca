@@ -435,8 +435,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceSpeed: 10
-  fallForce: 1
-  stiffness: 1
+  fallForce: 2
+  stiffness: 2
+  bottomStiffness: 5
 --- !u!1 &8269576694792346182
 GameObject:
   m_ObjectHideFlags: 0

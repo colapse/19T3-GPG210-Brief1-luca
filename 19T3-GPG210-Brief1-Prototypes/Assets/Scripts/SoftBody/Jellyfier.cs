@@ -11,7 +11,7 @@ public class Jellyfier : MonoBehaviour
     public float bounceSpeed;
     public float fallForce;
     public float stiffness;
-    public float stiffness;
+    public float bottomStiffness;
 
     private MeshFilter meshFilter;
     private Mesh mesh;
@@ -115,13 +115,9 @@ public class Jellyfier : MonoBehaviour
 
             if (bottomVertIndexes.Contains(i))
             {
-                finalStiffness = 5 * stiffness;
+                finalStiffness = bottomStiffness;
             }
-            else
-            {
-                jellyVertices[i].UpdateVelocity(bounceSpeed);
-            }
-            
+            jellyVertices[i].UpdateVelocity(bounceSpeed);
             jellyVertices[i].Settle(finalStiffness);
 
             jellyVertices[i].currentVertexPosition += jellyVertices[i].currentVelocity * Time.deltaTime;
@@ -176,7 +172,8 @@ public class Jellyfier : MonoBehaviour
     {
         for (int i = 0; i < jellyVertices.Length; i++)
         {
-            jellyVertices[i].ApplyPressureToVertex(transform, point, pressure);
+            bool ignoreY = (bottomVertIndexes.Contains(i))?true:false;
+            jellyVertices[i].ApplyPressureToVertex(transform, point, pressure, ignoreY);
         }
     }
 }
