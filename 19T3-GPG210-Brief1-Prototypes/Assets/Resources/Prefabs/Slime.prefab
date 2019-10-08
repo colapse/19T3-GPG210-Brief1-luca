@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 1624871326474612179}
   - component: {fileID: 3969842796378356005}
   - component: {fileID: 1127930853647466800}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 5342603693628144786}
   - component: {fileID: 5342603693628144785}
   - component: {fileID: 5342603693628144784}
+  - component: {fileID: 1214496442}
   - component: {fileID: 5342603693628144791}
   - component: {fileID: 5342603693628144790}
   - component: {fileID: 5342603693628144789}
@@ -145,6 +146,7 @@ GameObject:
   - component: {fileID: 5342603693628144783}
   - component: {fileID: 2647595863231287435}
   - component: {fileID: 6397962600505000600}
+  - component: {fileID: 1671872244770817467}
   m_Layer: 0
   m_Name: Slime
   m_TagString: Player
@@ -216,6 +218,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &1214496442
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5342603693628144794}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!65 &5342603693628144791
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -225,7 +241,7 @@ BoxCollider:
   m_GameObject: {fileID: 5342603693628144794}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -384,7 +400,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 366f15246a7cd6549a7cff5f13fbf6c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialAngle: 0
   splitForceMultiplier: 150
   freeFeed: 0
   rb: {fileID: 5342603693628144790}
@@ -407,6 +422,21 @@ MonoBehaviour:
   slimeFeedPrefab: {fileID: 6207340298185299616, guid: 4839d2ba9490dd145a6c9456adceff8a,
     type: 3}
   feedForce: 100
+--- !u!114 &1671872244770817467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5342603693628144794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aad4667ba60650e49bbd0f11f10fc0f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounceSpeed: 10
+  fallForce: 1
+  stiffness: 1
 --- !u!1 &8269576694792346182
 GameObject:
   m_ObjectHideFlags: 0
@@ -419,7 +449,7 @@ GameObject:
   - component: {fileID: 2561267208184278185}
   - component: {fileID: 6923668443622433151}
   - component: {fileID: 6077232553273204616}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -511,7 +541,7 @@ GameObject:
   - component: {fileID: 1547242271120628936}
   - component: {fileID: 6886298551986440955}
   - component: {fileID: 1342001841957997143}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -3267,7 +3267,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh14256
+  m_Name: pb_Mesh21236
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5532,7 +5532,7 @@ PrefabInstance:
     - target: {fileID: 5342603693628144786, guid: 886b1581e2c87034989b1b21d6d0f584,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 24.36
+      value: 16.46
       objectReference: {fileID: 0}
     - target: {fileID: 5342603693628144786, guid: 886b1581e2c87034989b1b21d6d0f584,
         type: 3}
@@ -5542,7 +5542,7 @@ PrefabInstance:
     - target: {fileID: 5342603693628144786, guid: 886b1581e2c87034989b1b21d6d0f584,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.98
+      value: -7.25
       objectReference: {fileID: 0}
     - target: {fileID: 5342603693628144786, guid: 886b1581e2c87034989b1b21d6d0f584,
         type: 3}
@@ -5589,20 +5589,15 @@ PrefabInstance:
       propertyPath: slimeInputManager
       value: 
       objectReference: {fileID: 1999366020}
-    - target: {fileID: 8269576694792346182, guid: 886b1581e2c87034989b1b21d6d0f584,
+    - target: {fileID: 1671872244770817467, guid: 886b1581e2c87034989b1b21d6d0f584,
         type: 3}
-      propertyPath: m_Layer
-      value: 2
+      propertyPath: stiffness
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8320447306866819355, guid: 886b1581e2c87034989b1b21d6d0f584,
+    - target: {fileID: 1671872244770817467, guid: 886b1581e2c87034989b1b21d6d0f584,
         type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2385241292983182904, guid: 886b1581e2c87034989b1b21d6d0f584,
-        type: 3}
-      propertyPath: m_Layer
-      value: 2
+      propertyPath: bounceSpeed
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 886b1581e2c87034989b1b21d6d0f584, type: 3}

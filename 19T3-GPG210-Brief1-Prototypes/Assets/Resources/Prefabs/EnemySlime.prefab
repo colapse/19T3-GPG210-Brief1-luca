@@ -195,6 +195,7 @@ GameObject:
   - component: {fileID: 3451296563847940102}
   - component: {fileID: 3451296563847940101}
   - component: {fileID: 3451296563847940100}
+  - component: {fileID: 7418244009474986814}
   - component: {fileID: 3451296563847940099}
   - component: {fileID: 3451296563847940098}
   - component: {fileID: 3451296563847940108}
@@ -209,6 +210,7 @@ GameObject:
   - component: {fileID: 4719750798693245983}
   - component: {fileID: 4398868013686601228}
   - component: {fileID: 3451296563847940109}
+  - component: {fileID: 1847678865}
   m_Layer: 0
   m_Name: EnemySlime
   m_TagString: Untagged
@@ -281,6 +283,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &7418244009474986814
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3451296563847940110}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!65 &3451296563847940099
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -290,7 +306,7 @@ BoxCollider:
   m_GameObject: {fileID: 3451296563847940110}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -381,6 +397,7 @@ MonoBehaviour:
   owner: {fileID: 3451296563847940097}
   nextState: {fileID: 3451296563847940123}
   jumpForceMultiplier: 300
+  rotationSpeed: 5
 --- !u!114 &3451296563847940103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -469,7 +486,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 366f15246a7cd6549a7cff5f13fbf6c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialAngle: 0
   splitForceMultiplier: 300
   freeFeed: 0
   rb: {fileID: 3451296563847940098}
@@ -509,6 +525,21 @@ MonoBehaviour:
   previousState: {fileID: 0}
   remainStateID: {fileID: 11400000, guid: 5d66e55392ce9144abfa5bf56871b1b1, type: 2}
   lastStateID: {fileID: 11400000, guid: 07025fd0bd346e54098ee2dc6db727bc, type: 2}
+--- !u!114 &1847678865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3451296563847940110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aad4667ba60650e49bbd0f11f10fc0f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounceSpeed: 10
+  fallForce: 1
+  stiffness: 1
 --- !u!1 &4961803923260232364
 GameObject:
   m_ObjectHideFlags: 0
