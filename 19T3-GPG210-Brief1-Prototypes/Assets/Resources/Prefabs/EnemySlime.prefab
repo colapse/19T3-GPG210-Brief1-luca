@@ -398,6 +398,7 @@ MonoBehaviour:
   nextState: {fileID: 3451296563847940123}
   jumpForceMultiplier: 300
   rotationSpeed: 5
+  elasticityMultiplier: 1
 --- !u!114 &3451296563847940103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -457,6 +458,7 @@ MonoBehaviour:
   owner: {fileID: 3451296563847940097}
   nextState: {fileID: 3451296563847940123}
   jumpForce: 50
+  elasticityMultiplier: 1
 --- !u!114 &3451296563847940123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -532,7 +534,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3451296563847940110}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aad4667ba60650e49bbd0f11f10fc0f1, type: 3}
   m_Name: 

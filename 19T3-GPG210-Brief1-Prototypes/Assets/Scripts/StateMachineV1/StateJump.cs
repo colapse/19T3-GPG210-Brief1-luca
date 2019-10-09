@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using DG.Tweening;
+using UnityEngine;
 
 namespace StateMachineV1
 {
@@ -14,6 +15,8 @@ namespace StateMachineV1
         private bool getUpright = false;
         private bool liftedOff = false;
         private Collider collider;
+        
+        public float elasticityMultiplier = 1f;
 
         private void Start()
         {
@@ -93,6 +96,12 @@ namespace StateMachineV1
                 
                 rb.AddForce(force);
                 jumpForceAdded = true;
+                Slime slime = owner.GetComponent<Slime>(); // hack
+                DOTween.To(() => transform.localScale, (x) => transform.localScale = x, new Vector3(0.25f*slime.Volume*elasticityMultiplier, 0.75f*slime.Volume*elasticityMultiplier, 0.25f*slime.Volume*elasticityMultiplier), 1f).SetEase(Ease.OutElastic).OnComplete(()=>
+                {
+                    DOTween.To(() => transform.localScale, (x) => transform.localScale = x,
+                            new Vector3(0.5f*slime.Volume, 0.5f*slime.Volume, 0.5f*slime.Volume),1f).SetEase(Ease.OutElastic).SetDelay(.5f); // TODO Setelay HACK. The reverse function should be executed ongrounded!
+                });
             }
             
             

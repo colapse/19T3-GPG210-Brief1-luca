@@ -12,6 +12,8 @@ public class Jellyfier : MonoBehaviour
     public float fallForce;
     public float stiffness;
     public float bottomStiffness;
+    public bool bindBottomVertices = true;
+    public int bottomVerticesCount = 12;
 
     private MeshFilter meshFilter;
     private Mesh mesh;
@@ -25,6 +27,7 @@ public class Jellyfier : MonoBehaviour
     private int[] bottomVertIndexes;
     private Color32[] bcolor;
     private Vector3[] bottomVecs;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -37,7 +40,7 @@ public class Jellyfier : MonoBehaviour
 
         //bottomVertIndexes = currentMeshVertices.OrderBy(x => x.y).Select((v, ind) => ind).Take(12).ToArray();  //V1
         //bottomVertIndexes = currentMeshVertices.OrderBy(x => x.y).Select(v => Array.IndexOf(currentMeshVertices,v)).Take(12).ToArray(); //V2
-        bottomVertIndexes = currentMeshVertices.Select((v1,i1)=>new {v1,i1}).OrderBy(x => x.v1.y).Select((v, ind) => v.i1).Take(12).ToArray(); //V3
+        bottomVertIndexes = currentMeshVertices.Select((v1,i1)=>new {v1,i1}).OrderBy(x => x.v1.y).Select((v, ind) => v.i1).Take(bottomVerticesCount).ToArray(); //V3
         bcolor = new Color32[bottomVertIndexes.Length];
         bottomVecs = new Vector3[bottomVertIndexes.Length];
 
@@ -113,7 +116,7 @@ public class Jellyfier : MonoBehaviour
         {
             float finalStiffness = stiffness;
 
-            if (bottomVertIndexes.Contains(i))
+            if (bindBottomVertices && bottomVertIndexes.Contains(i))
             {
                 finalStiffness = bottomStiffness;
             }
@@ -170,10 +173,13 @@ public class Jellyfier : MonoBehaviour
 
     private void ApplyPressureToPoint(Vector3 point, float pressure)
     {
-        for (int i = 0; i < jellyVertices.Length; i++)
+        if (jellyVertices != null)
         {
-            bool ignoreY = (bottomVertIndexes.Contains(i))?true:false;
-            jellyVertices[i].ApplyPressureToVertex(transform, point, pressure, ignoreY);
+            for (int i = 0; i < jellyVertices.Length; i++)
+            {
+                bool ignoreY = (bindBottomVertices && bottomVertIndexes.Contains(i))?true:false;
+                jellyVertices[i].ApplyPressureToVertex(transform, point, pressure, ignoreY);
+            }
         }
     }
 }

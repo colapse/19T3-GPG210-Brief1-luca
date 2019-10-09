@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using DG.Tweening;
+using UnityEngine;
 
 namespace StateMachineV1
 {
@@ -11,6 +12,8 @@ namespace StateMachineV1
 
         private float jumpCharge = 1;
         private bool jumped = false;
+        
+        public float elasticityMultiplier = 1f;
 
         private void Start()
         {
@@ -46,6 +49,12 @@ namespace StateMachineV1
         
                 rb.AddForce(forwardJumpForce*jumpCharge);
                 jumped = true;
+                
+                DOTween.To(() => transform.localScale, (x) => transform.localScale = x, new Vector3(0.4f*slime.Volume*elasticityMultiplier, 0.65f*slime.Volume*elasticityMultiplier, 0.65f*slime.Volume*elasticityMultiplier), .75f).SetEase(Ease.OutElastic).OnComplete(()=>
+                {
+                    DOTween.To(() => transform.localScale, (x) => transform.localScale = x,
+                        new Vector3(0.5f*slime.Volume, 0.5f*slime.Volume, 0.5f*slime.Volume),.6f).SetEase(Ease.OutElastic); // TODO Setelay HACK. The reverse function should be executed ongrounded!
+                });
             }
         
             if (IsGrounded() && rb.velocity.y < 0 && jumped)
