@@ -71,7 +71,7 @@ namespace TriggerSystemV2
 
             
             
-            if(!currentStatus.Equals(newStatus))
+            if(/*!currentStatus.Equals(newStatus)*/ currentStatus != newStatus)
             {
                 NotifyValueChanged(newStatus);
             }

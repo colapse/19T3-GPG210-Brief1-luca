@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using Helper;
 using Sirenix.OdinInspector;
@@ -26,7 +27,11 @@ public class OrbitalCamera : MonoBehaviour
     public float minDistanceToFocus = 10;
     public float minDistanceToRotPoint = 30;
     public float levelGroundExtentLength = 30; // TODO: AUtomatically get the value?
-
+    
+    public float defaultAngleToRotPoint = 10;
+    [ShowInInspector]
+    private float currentAngleToRotPoint = 0;
+    
     [Header("Other Settings")]
     public float focusCamMaxAngle = 20; // When the angle between the focus & the cam (to the rotation point) is large than this, the cam will be rotated
 
@@ -69,6 +74,8 @@ public class OrbitalCamera : MonoBehaviour
         HandleHorizontalRotation();
 
         HandleCameraDistance();
+
+        HandleCameraAngleToRotPoint();
 
         /*
         // TODO TEMP Rotation
@@ -139,6 +146,53 @@ public class OrbitalCamera : MonoBehaviour
         else
         {
             // TODO: If scroll input...
+        }
+    }
+
+    // TODO HACKY: This only works if the rotation point is BELOW the camera)
+    private void HandleCameraAngleToRotPoint()
+    {
+        // Calculate angle between rotation point & camera
+        Vector3 groundPointCamToRot = transform.position;
+        groundPointCamToRot.y = rotationPoint.position.y;
+        Vector3 groundDirToRotPoint = rotationPoint.position - groundPointCamToRot;
+        
+        currentAngleToRotPoint = Vector3.Angle(dirCamToRotPoint, groundDirToRotPoint);
+
+        // Check for obstacle in the way, increase angle
+        //Vector3 dirCamToFocusPoint = focusPoint.position - transform.position; // CAM CENTER TO FOCUS CENTER LINE
+        /* TODO NOTE: Currently checking for obstacles between the Camera and the BOTTOM CENTER of the focus point so the cam will go up higher & the player sees more when the slime moves behind a wall */
+        Vector3 focusPointCenterBottom = focusPoint.position;
+        focusPointCenterBottom.y -= focusPoint.GetComponent<Renderer>().bounds.extents.y - 0.1f; // HACK
+        Vector3 dirCamToFocusPoint = focusPointCenterBottom - transform.position; // CAM CENTER TO FOCUS BOTTOM LINE
+        float distCamToFocusPoint = Vector3.Distance(focusPointCenterBottom/*focusPoint.position*/, transform.position);
+        Debug.DrawRay(transform.position, dirCamToFocusPoint.normalized * distCamToFocusPoint, Color.red);
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, dirCamToFocusPoint, out hit,distCamToFocusPoint)) // TODO INPERFORMANT; Don't check every frame?
+        {
+            if (!hit.collider.CompareTag("Player")) // Something's in the way!
+            {
+                // Increase height = this will increase the angle to the rot point. Distance is handled elsewhere!
+                transform.position += Time.deltaTime * 3 * Vector3.up; // TODO HACKY. Make variable
+                return;
+            }
+
+        }
+        
+        // Go closer if not in default angle
+        if (!MathHelper.FApproximately(currentAngleToRotPoint, defaultAngleToRotPoint, .1f))
+        {
+            Vector3 futurePosition = transform.position + Time.deltaTime *3 * (currentAngleToRotPoint > defaultAngleToRotPoint?-1:1) * Vector3.up;
+            Vector3 dirFuturePosToFocus = /*focusPoint.position*/focusPointCenterBottom - futurePosition;
+            float distFutureCamPosToFocusPoint = Vector3.Distance(/*focusPoint.position*/focusPointCenterBottom, futurePosition);
+            if (Physics.Raycast(futurePosition, dirFuturePosToFocus, out hit, distFutureCamPosToFocusPoint)) // TODO INPERFORMANT; Don't check every frame?
+            {
+                if (hit.collider.CompareTag("Player")) // Something's in the way!
+                {
+                    transform.position = futurePosition;
+                    return;
+                }
+            }
         }
     }
 }

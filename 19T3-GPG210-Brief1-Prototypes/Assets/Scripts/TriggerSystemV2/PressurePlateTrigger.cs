@@ -128,7 +128,7 @@ namespace TriggerSystemV2
 
         public void HandleTriggerValueChanged(Trigger trigger, System.Object value)
         {
-            Debug.Log("Changed");
+            Debug.Log("Changed "+Convert.ToSingle(value));
             weightChanged = true;
             
         }
