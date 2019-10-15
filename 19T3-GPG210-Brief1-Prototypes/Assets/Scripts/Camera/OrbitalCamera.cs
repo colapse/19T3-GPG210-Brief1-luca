@@ -24,9 +24,11 @@ public class OrbitalCamera : MonoBehaviour
     public float maxMovementSpeed = 2;
     
     [Header("Distance Settings")]
-    public float minDistanceToFocus = 10;
-    public float minDistanceToRotPoint = 30;
+    public float minDistanceToFocus = 5;
+    public float minDistanceToRotPoint = 15;
+    public float maxDistanceToRotPoint = 40; // TODO NOTIMPLEMENTED
     public float levelGroundExtentLength = 30; // TODO: AUtomatically get the value?
+    
     
     public float defaultAngleToRotPoint = 10;
     [ShowInInspector]
@@ -145,7 +147,7 @@ public class OrbitalCamera : MonoBehaviour
         }
         else
         {
-            // TODO: If scroll input...
+            // TODO: If scroll input...?
         }
     }
 
