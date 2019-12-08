@@ -72,7 +72,9 @@ public class OrbitalCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if(focusPoint == null || rotationPoint == null)
+            return;
+            
         HandleHorizontalRotation();
 
         HandleCameraDistance();
@@ -98,15 +100,16 @@ public class OrbitalCamera : MonoBehaviour
 
     private void HandleHorizontalRotation()
     {
+        Vector3 rotPointPos = rotationPoint.position;
         //// Check if the focus target is outside the "cam area"
-        dirCamToRotPoint = rotationPoint.position - transform.position;
-        dirFocusToRotPoint = rotationPoint.position - focusPoint.position;
+        dirCamToRotPoint = rotPointPos - transform.position;
+        dirFocusToRotPoint = rotPointPos - focusPoint.position;
         
         
-        Debug.DrawLine(rotationPoint.position,rotationPoint.position - (Quaternion.Euler(0,focusCamMaxAngle,0)*dirCamToRotPoint));
-        Debug.DrawLine(rotationPoint.position,rotationPoint.position - (Quaternion.Euler(0,-focusCamMaxAngle,0)*dirCamToRotPoint));
-        Debug.DrawLine(rotationPoint.position,transform.position,Color.blue);
-        Debug.DrawLine(rotationPoint.position,focusPoint.position,Color.green);
+        Debug.DrawLine(rotPointPos,rotPointPos - (Quaternion.Euler(0,focusCamMaxAngle,0)*dirCamToRotPoint));
+        Debug.DrawLine(rotPointPos,rotPointPos - (Quaternion.Euler(0,-focusCamMaxAngle,0)*dirCamToRotPoint));
+        Debug.DrawLine(rotPointPos,transform.position,Color.blue);
+        Debug.DrawLine(rotPointPos,focusPoint.position,Color.green);
         
         // Calculate Angle between the two points
         float focusToCamAngle = Vector3.Angle(Vector3.Scale(dirCamToRotPoint.normalized,zeroYVec), Vector3.Scale(dirFocusToRotPoint.normalized,zeroYVec));
@@ -135,14 +138,17 @@ public class OrbitalCamera : MonoBehaviour
 
         if (autoDistance)
         {
-            if (distCamToRotPoint > minDistanceToRotPoint && distCamToRotPoint > 2.5f*distFocusToRotPoint /*Hacky*/ && distCamToFocus > minDistanceToFocus && !Mathf.Approximately(distCamToFocus, minDistanceToFocus))
+            if (distCamToRotPoint > minDistanceToRotPoint && distCamToRotPoint > 1.5f*distFocusToRotPoint /*Hacky*/ && distCamToFocus > minDistanceToFocus && !Mathf.Approximately(distCamToFocus, minDistanceToFocus))
             {
                 transform.position = Vector3.MoveTowards(transform.position, rotationPoint.position, maxMovementSpeed*Time.deltaTime);
             }
             else if((distCamToRotPoint < minDistanceToRotPoint || distCamToFocus < minDistanceToFocus || distCamToRotPoint < distFocusToRotPoint) && !Mathf.Approximately(distCamToFocus, minDistanceToFocus))
             {
                 float speedMultiplier = distCamToFocus / levelGroundExtentLength;
-                transform.position += maxMovementSpeed*speedMultiplier*Time.deltaTime * -dirCamToRotPoint.normalized; //Vector3.MoveTowards(transform.position, -rotationPoint.position, 0.1f);
+                //transform.position += maxMovementSpeed*speedMultiplier*Time.deltaTime * -dirCamToRotPoint.normalized; //Vector3.MoveTowards(transform.position, -rotationPoint.position, 0.1f);
+                transform.position = Vector3.MoveTowards(transform.position,
+                    rotationPoint.position + -dirCamToRotPoint.normalized * maxDistanceToRotPoint,
+                    maxMovementSpeed * speedMultiplier * Time.deltaTime);
             }
         }
         else

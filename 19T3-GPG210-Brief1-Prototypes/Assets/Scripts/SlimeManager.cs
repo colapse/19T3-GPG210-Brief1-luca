@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using StateMachineV1;
 using UnityEditor.PackageManager.Requests;
@@ -35,6 +36,32 @@ public class SlimeManager : MonoBehaviour
         {
             activeSlime.GetComponent<Renderer>().material = activeSlimeMaterial;
         }
+        
+        slimes?.ForEach(slime =>
+        {
+            slime.OnSlimeSplit += HandleSlimeHasSplit;
+            slime.OnGettingDestroyed += HandleSlimeGetsDestroyed;
+        });
+    }
+
+    private void OnDestroy()
+    {
+        slimes?.ForEach(slime => {
+            slime.OnSlimeSplit -= HandleSlimeHasSplit;
+            slime.OnGettingDestroyed -= HandleSlimeGetsDestroyed;
+        });
+    }
+
+    private void HandleSlimeHasSplit(Slime arg1, Slime arg2)
+    {
+        slimes.Add(arg2);
+    }
+
+    private void HandleSlimeGetsDestroyed(Slime obj)
+    {
+        slimes.Remove(obj);
+        obj.OnSlimeSplit -= HandleSlimeHasSplit;
+        obj.OnGettingDestroyed -= HandleSlimeGetsDestroyed;
     }
 
     // Update is called once per frame
@@ -77,6 +104,7 @@ public class SlimeManager : MonoBehaviour
         }
     }
 
+    // Hacky, put in Slime Script
     void SplitSlime(Slime slime)
     {
         if (slime != null && slime.Volume >= slimeMinVolume * 2 && slimePrefab)

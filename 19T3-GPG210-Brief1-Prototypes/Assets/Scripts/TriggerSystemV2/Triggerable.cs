@@ -30,7 +30,7 @@ namespace TriggerSystemV2
 
         
         
-        [NonSerialized, OdinSerialize]
+        [OdinSerialize]
         public List<TriggerRequirement> triggerRequirements;
         [SerializeField] public bool allReqMustBeMet = true;
 
@@ -61,7 +61,6 @@ namespace TriggerSystemV2
         private void HandleRequirementStatusChange(TriggerRequirement triggerReq, bool requirementStatus)
         {
             bool currentStatus = IsTriggered();
-            
             if (triggerReqStatus.ContainsKey(triggerReq))
             {
                 triggerReqStatus[triggerReq] = requirementStatus;

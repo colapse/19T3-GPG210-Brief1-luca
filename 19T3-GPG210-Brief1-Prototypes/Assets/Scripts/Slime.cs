@@ -1,21 +1,37 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using Helper;
 using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.Assertions.Comparers;
+using UnityEngine.Networking;
 using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 public class Slime : MonoBehaviour
 {
-    public static int minSlimeVolume = 1;
-    public static int maxSlimeVolume = 5;
+    // (Original Slime, New Slime)
+    public event Action<Slime, Slime> OnSlimeSplit;
+    public event Action<Slime> OnGettingDestroyed;
+    
+    public int minSlimeVolume = 1;
+    public int maxSlimeVolume = 6;
     public static GameObject enemySlimePrefab; // TODO, maybe outsource to a object pool; Bad location Hacky.
 
     public float splitForceMultiplier = 300;
     public bool freeFeed = false;
+
+    public float minFusionForce = 1.5f;
+    
+    public float oversizeReductionTimer = .5f;
+    public Vector3 overSizeSplitForce = Vector3.forward;
+    public bool doOversizeSplitSquashEffect = false;
+    public float squashElasticityMultiplier = 1f;
+    public float oversizeSplitSquashDuration = 2f;
+    public int oversizeSplitSquashVibration = 10;
+    public float oversizeSplitSquashIntensity = 2;
     
     public Rigidbody rb;
      [SerializeField] private float volume = 1;
@@ -40,6 +56,11 @@ public class Slime : MonoBehaviour
         }
     }
 
+    private void OnDestroy()
+    {
+        OnGettingDestroyed?.Invoke(this);
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -48,14 +69,38 @@ public class Slime : MonoBehaviour
 
     void OnVolumeChanged(float newValue)
     {
-        transform.localScale = 0.5f * newValue * Vector3.one;
+        var newScaleFactor = MathHelper.Sigmoid(newValue) - 0.5f;
+        newScaleFactor = Mathf.Max(0.5f, newScaleFactor);// Hacky, make var
+        transform.localScale = newScaleFactor* newValue * Vector3.one;// 0.5f * newValue * Vector3.one;
+        
         rb.mass = newValue * 2;
+        if(newValue > maxSlimeVolume)
+            StartCoroutine(WaitAndReduceOversize());
+    }
+
+    IEnumerator WaitAndReduceOversize()
+    {
+        if(Volume <= maxSlimeVolume)
+            yield break;
+        
+        yield return new WaitForSeconds(oversizeReductionTimer);
+
+        var splitForce = transform.rotation * overSizeSplitForce;
+        
+        SplitSlime(splitForce);
+        
+        if (doOversizeSplitSquashEffect)
+        {
+            transform.DOPunchScale(Vector3.one*oversizeSplitSquashIntensity, oversizeSplitSquashDuration, oversizeSplitSquashVibration, squashElasticityMultiplier);
+        }
+        
+        yield return 0;
     }
 
     private void OnCollisionEnter(Collision other)
     {
         Slime otherSlime = other.collider.GetComponent<Slime>();
-        if (otherSlime != null && (other.impulse.magnitude > 2 || freeFeed || otherSlime.freeFeed))
+        if (otherSlime != null && (other.impulse.magnitude > minFusionForce || freeFeed || otherSlime.freeFeed))
         {
             /*if (otherSlime.Volume > volume)
             {
@@ -109,7 +154,7 @@ public class Slime : MonoBehaviour
                 newSlime.rb.AddForce(forwardForce);
                 //slime.rb.AddForce(slime.transform.right*-30*newSlime.Volume);
             }
-            
+            OnSlimeSplit?.Invoke(this, newSlime);
         }
     }
 

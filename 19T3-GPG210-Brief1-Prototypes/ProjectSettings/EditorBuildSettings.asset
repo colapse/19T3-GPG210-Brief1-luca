@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainScene.unity
+    guid: 7d01a55b502033349b7c560ae040d0a2
+  - enabled: 1
+    path: Assets/Scenes/SlimePuzzle3.unity
+    guid: 868478aab7d2efd47845b8b7eac2af93
   m_configObjects: {}

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Helper
 {
@@ -40,6 +41,12 @@ namespace Helper
             //const double epsilon = 0.005;
             //Debug.Log(v3.magnitude+" "+other.magnitude+" < "+treshold);
             //return (Mathf.Abs(v3.magnitude - other.magnitude) < treshold);
+        }
+    
+        // https://stackoverflow.com/questions/412019/math-optimization-in-c-sharp
+        public static float Sigmoid(float value) {
+            var k = (float)Math.Exp((double)value);
+            return k / (1.0f + k);
         }
     }
 }

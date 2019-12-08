@@ -23,6 +23,8 @@ public class Jellyfier : MonoBehaviour
 
     private MeshCollider mc;
 
+    public bool useTrigger = false;
+
     // HACK
     private int[] bottomVertIndexes;
     private Color32[] bcolor;
@@ -48,11 +50,9 @@ public class Jellyfier : MonoBehaviour
         {
             bcolor[i] = new Color32((byte) UnityEngine.Random.Range(0, 255), (byte) UnityEngine.Random.Range(0, 255),
                 (byte) UnityEngine.Random.Range(0, 255), 255);
-            Debug.Log(bottomVertIndexes[i]);
         }
         
         
-        Debug.Log("No. BottomVert Found: "+bottomVertIndexes.Length);
         //bottomVertIndexes =  currentMeshVertices.OrderByDescending(x => x.y).Where(); //Select((v, ind) => ind).Take(12).ToArray();
 
         /*
@@ -167,8 +167,14 @@ public class Jellyfier : MonoBehaviour
             Vector3 inputPoint = collisionPoints[i].point + (collisionPoints[i].point * .1f);
             ApplyPressureToPoint(inputPoint, fallForce);
         }
-        
-        
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(!useTrigger)
+            return;
+        // TODO Hack.
+        ApplyPressureToPoint(other.transform.position, fallForce);
     }
 
     private void ApplyPressureToPoint(Vector3 point, float pressure)

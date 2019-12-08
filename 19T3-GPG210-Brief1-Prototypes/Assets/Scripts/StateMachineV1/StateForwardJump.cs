@@ -15,6 +15,8 @@ namespace StateMachineV1
         
         public float elasticityMultiplier = 1f;
 
+        public bool doTweenSquashEffect = false;
+
         private void Start()
         {
             rb = GetComponent<Rigidbody>();
@@ -49,12 +51,15 @@ namespace StateMachineV1
         
                 rb.AddForce(forwardJumpForce*jumpCharge);
                 jumped = true;
-                
-                DOTween.To(() => transform.localScale, (x) => transform.localScale = x, new Vector3(0.4f*slime.Volume*elasticityMultiplier, 0.65f*slime.Volume*elasticityMultiplier, 0.65f*slime.Volume*elasticityMultiplier), .75f).SetEase(Ease.OutElastic).OnComplete(()=>
+
+                if (doTweenSquashEffect)
                 {
-                    DOTween.To(() => transform.localScale, (x) => transform.localScale = x,
-                        new Vector3(0.5f*slime.Volume, 0.5f*slime.Volume, 0.5f*slime.Volume),.6f).SetEase(Ease.OutElastic); // TODO Setelay HACK. The reverse function should be executed ongrounded!
-                });
+                    DOTween.To(() => transform.localScale, (x) => transform.localScale = x, new Vector3(0.4f*slime.Volume*elasticityMultiplier, 0.65f*slime.Volume*elasticityMultiplier, 0.65f*slime.Volume*elasticityMultiplier), .75f).SetEase(Ease.OutElastic).OnComplete(()=>
+                    {
+                        DOTween.To(() => transform.localScale, (x) => transform.localScale = x,
+                            new Vector3(0.5f*slime.Volume, 0.5f*slime.Volume, 0.5f*slime.Volume),.6f).SetEase(Ease.OutElastic); // TODO Setelay HACK. The reverse function should be executed ongrounded!
+                    });
+                }
             }
         
             if (IsGrounded() && rb.velocity.y < 0 && jumped)
@@ -63,7 +68,7 @@ namespace StateMachineV1
             }
         }
 
-        //Ugly
+        //HACK
         bool IsGrounded()
         {
             return Physics.Raycast(transform.position, -Vector3.up, distanceToGround + 0.1f);
