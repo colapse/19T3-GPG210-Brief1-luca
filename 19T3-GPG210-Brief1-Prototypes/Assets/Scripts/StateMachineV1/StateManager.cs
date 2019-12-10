@@ -26,8 +26,10 @@ namespace StateMachineV1
             slime = GetComponent<Slime>();
             
             // TODO HACK
-            if(gameObject.CompareTag("Player"))
-                sm = Camera.main?.gameObject.GetComponent<SlimeManager>();
+            if (gameObject.CompareTag("Player"))
+            {
+                sm = FindObjectOfType<UnityEngine.Camera>()?.GetComponent<SlimeManager>();
+            }
             
             currentState = defaultState;
         }

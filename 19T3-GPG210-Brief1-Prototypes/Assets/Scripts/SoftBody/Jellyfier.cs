@@ -95,7 +95,7 @@ public class Jellyfier : MonoBehaviour
         }*/
         
         // HACK
-        if (Input.GetMouseButton(0))
+        /*if (Input.GetMouseButton(0))
         {
             var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
  
@@ -105,7 +105,7 @@ public class Jellyfier : MonoBehaviour
             {
                 ApplyPressureToPoint(hit.point, 5);
             }
-        }
+        }*/
         
         UpdateVertices();
     }
