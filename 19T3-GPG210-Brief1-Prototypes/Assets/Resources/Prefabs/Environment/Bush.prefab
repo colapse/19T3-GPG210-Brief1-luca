@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2483710590162430786}
   - component: {fileID: 679158355}
   - component: {fileID: 679158351}
+  - component: {fileID: 7157985858827177521}
   m_Layer: 2
   m_Name: Bush
   m_TagString: Untagged
@@ -4302,8 +4303,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bounceSpeed: 20
   fallForce: 2
-  stiffness: 6
+  stiffness: 3
   bottomStiffness: 5
   bindBottomVertices: 1
   bottomVerticesCount: 12
   useTrigger: 1
+--- !u!114 &7157985858827177521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3527444832553634902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5a85c8b413c4555963fd8bad9ea0ec0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetSetup:
+    target: {fileID: 6280040988637317022}
+    weight: 1
+    radius: 1

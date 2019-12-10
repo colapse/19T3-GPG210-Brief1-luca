@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5543786642039710459}
   - component: {fileID: 5543786642039710458}
   - component: {fileID: 5543786642039710461}
+  - component: {fileID: 5305923363819574857}
   m_Layer: 0
   m_Name: TrigSysV2PressurePlate
   m_TagString: Untagged
@@ -106,3 +107,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxMass: 8
+  weightCheckerInterval: 0.5
+  emptyYPos: 0
+  maxWeightYPosition: 0
+--- !u!114 &5305923363819574857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5543786642039710463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5a85c8b413c4555963fd8bad9ea0ec0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetSetup:
+    target: {fileID: 5543786642039710460}
+    weight: 1
+    radius: 2

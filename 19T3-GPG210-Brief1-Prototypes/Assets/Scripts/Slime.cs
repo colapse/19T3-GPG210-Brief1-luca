@@ -39,12 +39,24 @@ public class Slime : MonoBehaviour
     {
         get => volume;
         set
-        { OnVolumeChanged(value); volume = value; }
+        { volume = value; OnVolumeChanged(value);  }
     }
-
+    
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+/*
+
+        EnemyScanner es = GetComponentInChildren<EnemyScanner>();
+        if (es != null)
+        {
+            es.slime = this;
+            es.slimeInputManager = GetComponent<SlimeInputManager>();
+            if (es.slimeInputManager == null)
+            {
+                es.slimeInputManager = GameObject.FindWithTag("Main Camera")?.GetComponent<SlimeInputManager>(); // Super ugly hacky
+            }
+        }*/
     }
 
     // Start is called before the first frame update

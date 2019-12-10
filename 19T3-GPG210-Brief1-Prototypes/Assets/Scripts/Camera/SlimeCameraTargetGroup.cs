@@ -33,6 +33,12 @@ namespace Camera
         
         public void AddFocusTarget(Target focusTarget)
         {
+            if (FindMember(focusTarget.target) > 0)
+            {
+                RemoveFocusTarget(focusTarget.target);
+            }
+                
+                
             AddMember(focusTarget.target, focusTarget.weight, focusTarget.radius);
             OnTargetsChange?.Invoke(this);
         }
@@ -45,7 +51,14 @@ namespace Camera
 
         public void AddFocusTargets(List<Target> focusTargets)
         {
-            focusTargets?.ForEach(t => { AddMember(t.target, t.weight, t.radius); });
+            focusTargets?.ForEach(t =>
+            {
+                if (FindMember(t.target) > 0)
+                {
+                    RemoveFocusTarget(t.target);
+                }
+                AddMember(t.target, t.weight, t.radius);
+            });
             OnTargetsChange?.Invoke(this);
         }
         

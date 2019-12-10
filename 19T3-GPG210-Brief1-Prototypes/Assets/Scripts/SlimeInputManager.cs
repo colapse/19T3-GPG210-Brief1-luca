@@ -18,6 +18,9 @@ public class SlimeInputManager : MonoBehaviour
 
     public bool wasGroundedLastFrame = false; // Hack. shouldnt be in here
 
+    // 1. Slime = detecting slime;; Slime = Enemy Slime
+    public event Action<Slime, Slime> OnEnemyEnteredSight;
+    public event Action<Slime, Slime> OnEnemyExitedSight;
     private void Start()
     {
         enemiesInSight = new List<Slime>();
@@ -27,6 +30,18 @@ public class SlimeInputManager : MonoBehaviour
     private void Update()
     {
         
+    }
+
+    public void AddEnemyInsight(Slime detectorSlime, Slime detectedSlime)
+    {
+        enemiesInSight.Add(detectedSlime);
+        OnEnemyEnteredSight?.Invoke(detectorSlime, detectedSlime);
+    }
+
+    public void RemoveEnemyInsight(Slime detectorSlime, Slime detectedSlime)
+    {
+        enemiesInSight.Remove(detectedSlime);
+        OnEnemyExitedSight?.Invoke(detectorSlime, detectedSlime);
     }
 
     private void LateUpdate()

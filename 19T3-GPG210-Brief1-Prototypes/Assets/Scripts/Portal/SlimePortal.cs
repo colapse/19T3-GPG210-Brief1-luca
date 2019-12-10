@@ -134,7 +134,10 @@ namespace Portal
 
         private void OnTriggerEnter(Collider other)
         {
-            if(!(collisionSplashParticles?.isPlaying ?? true))
+            if(other.gameObject.layer == LayerMask.NameToLayer("Ignore Raycast"))
+                return;
+            
+            if(!(collisionSplashParticles?.isPlaying ?? true)) // Hack
                 collisionSplashParticles.Play();
             HandleObjectEntered(other.gameObject);
             /*var slime = other.GetComponent<Slime>();

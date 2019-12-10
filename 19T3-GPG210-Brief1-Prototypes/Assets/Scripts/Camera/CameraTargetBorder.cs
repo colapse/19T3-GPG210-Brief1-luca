@@ -8,6 +8,7 @@ using UnityEngine;
 
 namespace Camera
 {
+    
     public class CameraTargetBorder : MonoBehaviour
     {
         public bool emptyAllFocusTargets;
@@ -17,22 +18,34 @@ namespace Camera
         private CameraTarget addCameraTarget; // Just for Inspector & usability
         public List<CinemachineTargetGroup.Target> addFocusTargets = new List<CinemachineTargetGroup.Target>();
 
+        public SlimeManager playerSlimeManager; // hacky
+
+        private void Start()
+        {
+            playerSlimeManager = FindObjectOfType<SlimeManager>();
+        }
+
         private void AddTargetToList()
         {
 
-            if (!(addCameraTarget?.targetSetup ?? default).Equals(default) && addFocusTargets.Contains(addCameraTarget.targetSetup, addCameraTarget))
+            if (addCameraTarget != null && !(addCameraTarget.targetSetup).Equals(default) && !addFocusTargets.Contains(addCameraTarget.targetSetup, addCameraTarget))
             {
                 
                 addFocusTargets.Add(addCameraTarget.targetSetup);
             }
                 
-            addFocusTargets = default;
+            addCameraTarget = null;
         }
         
         private void OnTriggerEnter(Collider other)
         {
-            var sct = other.GetComponent<SlimeCameraTargetGroup>();
-            if (sct == null) return;
+            Slime s = other.GetComponent<Slime>();
+            
+            if(s == null)
+                return;
+
+            SlimeCameraTargetGroup sct = null;
+            if (!(playerSlimeManager?.slimeCameraTargetGroups?.TryGetValue(s, out sct) ?? false) || sct == null) return;
             if (emptyAllFocusTargets)
                 sct.RemoveAllFocusTargets();
 

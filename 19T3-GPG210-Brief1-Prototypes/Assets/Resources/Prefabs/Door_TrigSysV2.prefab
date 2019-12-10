@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2093647958305744983}
   - component: {fileID: 2093647958305744976}
   - component: {fileID: 2093647958305744980}
+  - component: {fileID: 6173454987318933954}
   m_Layer: 0
   m_Name: Door_TrigSysV2
   m_TagString: Untagged
@@ -115,9 +116,6 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
-    - Name: onStatusChanged
-      Entry: 6
-      Data: 
     - Name: triggerRequirements
       Entry: 7
       Data: 0|System.Collections.Generic.List`1[[TriggerSystemV2.TriggerRequirement,
@@ -152,6 +150,11 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+  statusChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: TriggerSystemV2.TriggerableEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   allReqMustBeMet: 1
 --- !u!114 &2093647958305744980
 MonoBehaviour:
@@ -170,3 +173,19 @@ MonoBehaviour:
   openPosition: {x: 26.06, y: -5.57, z: 3.25}
   doorMovementSpeed: 1
   doorOpen: 0
+--- !u!114 &6173454987318933954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2093647958305744978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5a85c8b413c4555963fd8bad9ea0ec0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetSetup:
+    target: {fileID: 2093647958305744977}
+    weight: 1
+    radius: 2

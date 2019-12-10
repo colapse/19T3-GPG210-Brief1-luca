@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Camera;
+using Cinemachine;
+using Sirenix.Utilities;
 using StateMachineV1;
 using UnityEditor.PackageManager.Requests;
 using UnityEngine;
@@ -12,9 +15,11 @@ public class SlimeManager : MonoBehaviour
     public FocusChangeDel onFocusChange;
 
     public SlimeInputManager slimeInputManager;
+    public CinemachineVirtualCamera playerVirtualCamera;
       
     public void NotifyFocusChange(GameObject gameObject)
     {
+        UpdateVirtualCameraTarget();
         if(onFocusChange != null)
             onFocusChange (gameObject);
     }
@@ -27,21 +32,87 @@ public class SlimeManager : MonoBehaviour
     public float slimeMaxVolume = 1;
     
     public List<Slime> slimes;
+    public GameObject slimeCameraTargetGroupPrefab;
+    public Dictionary<Slime, SlimeCameraTargetGroup> slimeCameraTargetGroups;
 
     public Slime activeSlime;
     // Start is called before the first frame update
     void Start()
     {
-        if (activeSlime != null)
+        if (activeSlime == null && slimes?.Count > 0)
         {
-            activeSlime.GetComponent<Renderer>().material = activeSlimeMaterial;
+            activeSlime = slimes[0];
         }
+
+        if (slimeCameraTargetGroups == null)
+        {
+            slimeCameraTargetGroups = new Dictionary<Slime, SlimeCameraTargetGroup>();
+        }
+
+        if (slimes == null)
+        {
+            slimes = new List<Slime>();
+        }
+        
+        if (activeSlime != null)
+            activeSlime.GetComponent<Renderer>().material = activeSlimeMaterial;
+    
+        UpdateVirtualCameraTarget();
         
         slimes?.ForEach(slime =>
         {
             slime.OnSlimeSplit += HandleSlimeHasSplit;
             slime.OnGettingDestroyed += HandleSlimeGetsDestroyed;
         });
+
+        if (slimeInputManager != null)
+        {
+            slimeInputManager.OnEnemyEnteredSight += HandleEnemyEnteredSight;
+            slimeInputManager.OnEnemyExitedSight += HandleEnemyExitedSight;
+        }
+    }
+
+    private void HandleEnemyExitedSight(Slime detectorSlime, Slime detectedSlime)
+    {
+
+        slimeCameraTargetGroups?.Values.ForEach(sctg =>
+        {
+            var ct = detectedSlime.GetComponent<CameraTarget>();
+            if(ct != null)
+                sctg.RemoveFocusTarget(ct.targetSetup);
+        });
+        /*if (slimeCameraTargetGroups.TryGetValue(activeSlime, out var sctg))
+        {
+            sctg.
+        }*/
+    }
+
+    private void HandleEnemyEnteredSight(Slime detectorSlime, Slime detectedSlime)
+    {
+        slimeCameraTargetGroups?.Values.ForEach(sctg =>
+        {
+            var ct = detectedSlime.GetComponent<CameraTarget>();
+            if(ct != null)
+                sctg.AddFocusTarget(ct.targetSetup);
+        });
+    }
+
+    private void UpdateVirtualCameraTarget()
+    {
+        if (activeSlime == null || playerVirtualCamera == null) return;
+        SlimeCameraTargetGroup sctg = null;
+        if (!slimeCameraTargetGroups.TryGetValue(activeSlime, out sctg))
+        {
+            sctg = Instantiate(slimeCameraTargetGroupPrefab)?.GetComponent<SlimeCameraTargetGroup>();
+            if (sctg != null)
+            {
+                sctg.slime = activeSlime;
+                slimeCameraTargetGroups.Add(activeSlime, sctg);
+            }
+        }
+        
+        playerVirtualCamera.m_LookAt = activeSlime.transform;
+        playerVirtualCamera.m_Follow = sctg.transform; // Required SlimeCameraTargetgGroup Component to work correctly!
     }
 
     private void OnDestroy()
@@ -50,10 +121,23 @@ public class SlimeManager : MonoBehaviour
             slime.OnSlimeSplit -= HandleSlimeHasSplit;
             slime.OnGettingDestroyed -= HandleSlimeGetsDestroyed;
         });
+
+        if (slimeInputManager != null)
+        {
+            slimeInputManager.OnEnemyEnteredSight += HandleEnemyEnteredSight;
+            slimeInputManager.OnEnemyExitedSight += HandleEnemyExitedSight;
+        }
     }
 
     private void HandleSlimeHasSplit(Slime arg1, Slime arg2)
     {
+        SlimeCameraTargetGroup sctg = Instantiate(slimeCameraTargetGroupPrefab)?.GetComponent<SlimeCameraTargetGroup>();
+        if (sctg != null)
+        {
+            sctg.slime = activeSlime;
+            slimeCameraTargetGroups.Add(activeSlime, sctg);
+        }
+        UpdateVirtualCameraTarget();
         slimes.Add(arg2);
     }
 
@@ -77,7 +161,7 @@ public class SlimeManager : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Tab))
         {
             int nextSlimeIndex = activeSlime != null?slimes.IndexOf(activeSlime)+1:0;
-            if (nextSlimeIndex > slimes.Count - 1)
+            if (nextSlimeIndex > slimes.Count - 1 || nextSlimeIndex < 0)
             {
                 nextSlimeIndex = 0;
             }
