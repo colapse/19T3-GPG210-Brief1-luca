@@ -52,6 +52,7 @@ namespace Portal
         public bool knockBackWhenCantBeEntered = false;
         public bool knockBackWhenInactive = false;
         public float knockbackVelocity = 5;
+        public bool allowNonRigidbody = true;
 
         private GameObject GetSpitOutObjWrapper()
         {
@@ -134,7 +135,7 @@ namespace Portal
 
         private void OnTriggerEnter(Collider other)
         {
-            if(other.gameObject.layer == LayerMask.NameToLayer("Ignore Raycast"))
+            if(other.gameObject.layer == LayerMask.NameToLayer("Ignore Raycast")) // Temp Hack
                 return;
             
             if(!(collisionSplashParticles?.isPlaying ?? true)) // Hack
@@ -168,9 +169,16 @@ namespace Portal
                 
                 return;
             }
+            
+            
+
+            if (!allowNonRigidbody && !go.TryGetComponent(out Rigidbody r))
+                return;
+            
             go.SetActive(false);
             AddObjectToPortal(go);
             OnObjectEnteredPortal?.Invoke(this, go);
+            
         }
 
         public void AddObjectToPortal(GameObject go)
@@ -244,6 +252,11 @@ namespace Portal
             Rigidbody objRb = go.GetComponent<Rigidbody>();
             if (objRb == null)
             {
+                if (!allowNonRigidbody)
+                {// TODO Hacky
+                    return;
+                }
+                
                 var wrapper = GetSpitOutObjWrapper();
                 go.transform.SetParent(wrapper.transform);
                 objRb = wrapper.GetComponent<Rigidbody>();

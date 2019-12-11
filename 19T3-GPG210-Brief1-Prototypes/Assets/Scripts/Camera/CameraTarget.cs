@@ -17,7 +17,7 @@ namespace Camera
 
         public bool Equals(CinemachineTargetGroup.Target x, CinemachineTargetGroup.Target y)
         {
-            return x.target.Equals(y.target);
+            return x.target?.Equals(y.target) ?? false;
         }
 
         public int GetHashCode(CinemachineTargetGroup.Target obj)
