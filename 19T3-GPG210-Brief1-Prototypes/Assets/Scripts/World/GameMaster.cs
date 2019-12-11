@@ -48,8 +48,8 @@ public class GameMaster : SerializedMonoBehaviour
         isLoadingScene = true;
         ToggleLoadingScreen(true);  
         yield return new WaitForSeconds(1);
-        SceneManager.UnloadSceneAsync(scenes[activeScene]);
-        AsyncOperation asOpLoader = SceneManager.LoadSceneAsync(scenes[sceneName]);
+        //SceneManager.UnloadSceneAsync(scenes[activeScene]);
+        AsyncOperation asOpLoader = SceneManager.LoadSceneAsync(scenes[sceneName], LoadSceneMode.Single);
         asOpLoader.completed += operation =>
             {
                 activeScene = sceneName;

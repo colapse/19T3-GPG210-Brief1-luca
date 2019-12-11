@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Camera;
 using Cinemachine;
 using Sirenix.Utilities;
@@ -137,6 +138,9 @@ public class SlimeManager : MonoBehaviour
             sctg.slime = activeSlime;
             slimeCameraTargetGroups.Add(activeSlime, sctg);
         }
+
+        arg2.OnSlimeSplit += HandleSlimeHasSplit;
+        arg2.OnGettingDestroyed += HandleSlimeGetsDestroyed;
         UpdateVirtualCameraTarget();
         slimes.Add(arg2);
     }
@@ -146,6 +150,19 @@ public class SlimeManager : MonoBehaviour
         slimes.Remove(obj);
         obj.OnSlimeSplit -= HandleSlimeHasSplit;
         obj.OnGettingDestroyed -= HandleSlimeGetsDestroyed;
+
+        StartCoroutine(WaitAndEndGame());
+    }
+
+    private IEnumerator WaitAndEndGame()
+    {
+        yield return new WaitForSeconds(2);
+        if (slimes.Count <= 0 || slimes.IsNullOrEmpty())
+        {//FindObjectOfType<GameMaster>()?.LoadScene(GameMaster.SceneNames.MENU);
+            FindObjectOfType<WorldManager>()?.LevelEndReached();
+        }
+
+        yield return 0;
     }
 
     // Update is called once per frame
